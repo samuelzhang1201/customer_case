@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: contacts_joined_with_transactions
+    description: '{{ doc("contacts_trans_desc") }}'
     config:
       materialized: view
     columns:
@@ -13,3 +14,6 @@ models:
                 error_if: ">5"
                 warn_if: ">0"
           - unique
+
+  - name: customers
+    description: '{{ doc("customers_desc")  }}'

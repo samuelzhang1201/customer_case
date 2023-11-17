@@ -124,6 +124,7 @@ My opinions are:
 4) rename schema using macro
 5) considering SDC type 2 for stg_sf__contacts, maybe it's not best suitable for this project, but it just for demonstration.
 6) for transacion table, we can consider to use incremental materalization to minimize load.
+7) we can use doc block for better documentation
 
 
 
