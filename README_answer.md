@@ -108,14 +108,18 @@ I created another target in profiles.yml which is called 'cloud', and used targe
    Please update the `customers` model for these columns. Also, write singular test(s) to validate the logic.
 I have 2 steps:
  First sept: modified customer sql model as required and commit.
- second sept: optimize macro and setup tests as required.
-
+ second sept: optimized macro and setup tests as required.
+              I usedd jinja for loop to create mulitple columns.
+              I also added 2 singular test for first/last purchase date
+              i added 1 singualr test for valid customers
+              I added 1 singular test for total purchase amount > 0
 
 
 7. Any other improvements you'd like to make?
-
-
-
+I would say: 
+1) seperate the schemas for stage and data mart.
+2) adding ymal files to stage models.
+3) Seperate dev and prod target environment.
 
 
 

@@ -2,7 +2,7 @@
 
     {% if target.name == 'local' %}
 
-        date_part('year', age(current_date, {{ date_column }}))
+        date_part('year', age(current_date,{{ date_column }}))
 
     {% else %}
 
