@@ -7,5 +7,13 @@ models:
     columns:
       - name: id
         tests:
-          - not_null
-          - unique
+          - not_null:
+              config:
+                serverity: error
+                error_if: ">5"
+                warn_if: ">0"
+          - unique:
+              config:
+                serverity: error
+                error_if: ">10"
+                warn_if: ">0"      

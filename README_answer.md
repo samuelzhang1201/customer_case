@@ -68,6 +68,12 @@ Solution: added 'Kitchen'
 Failure: source_unique_salesforce_contacts_id
 Solution: add serverity level : warnning
 
+Failure: not_null_contacts_joined_with_transactions_id and unique_contacts_joined_with_transactions_id
+Solution: add serverity level : warnning
+
+I prefer not to change any seeds or source files at the very beginning phase to maintain data integrity.
+
+
 2. Add a test to validate the referential integrity of the `transactions` table (`contact_id` refers to a valid contact) and ensure it passes
 
 
