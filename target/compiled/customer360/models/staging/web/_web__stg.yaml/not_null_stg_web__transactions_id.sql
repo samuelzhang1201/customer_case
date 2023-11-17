@@ -5,7 +5,7 @@
 
 
 select id
-from "dbt"."public"."stg_web__transactions"
+from "dbt"."staging"."stg_web__transactions"
 where id is null
 
 

@@ -116,10 +116,14 @@ I have 2 steps:
 
 
 7. Any other improvements you'd like to make?
-I would say: 
+My opinions are: 
+
 1) seperate the schemas for stage and data mart.
 2) adding ymal files to stage models.
 3) Seperate dev and prod target environment.
+4) rename schema using macro
+5) considering SDC type 2 for stg_sf__contacts, maybe it's not best suitable for this project, but it just for demonstration.
+6) for transacion table, we can consider to use incremental materalization to minimize load.
 
 
 

@@ -9,13 +9,13 @@ select
 
 with child as (
     select contact_id as from_field
-    from "dbt"."public"."stg_web__transactions"
+    from "dbt"."staging"."stg_web__transactions"
     where contact_id is not null
 ),
 
 parent as (
     select new_id as to_field
-    from "dbt"."public"."stg_sf__contacts"
+    from "dbt"."staging"."stg_sf__contacts"
 )
 
 select

@@ -21,7 +21,7 @@ SELECT
     ,case when category = 'Sports, Fitness & Outdoors' then amount else 0 end as "Sports, Fitness & Outdoors_amount"
     ,case when category = 'Kitchen' then amount else 0 end as "Kitchen_amount"
     
-FROM "dbt"."public"."contacts_joined_with_transactions"
+FROM "dbt"."marts"."contacts_joined_with_transactions"
 )
 , final as (
 select 
