@@ -76,8 +76,10 @@ I prefer not to change any seeds or source files at the very beginning phase to 
 
 2. Add a test to validate the referential integrity of the `transactions` table (`contact_id` refers to a valid contact) and ensure it passes
 
-
-
+As I prefer not to change source data, I did some modification on stg models:
+Firstly, I use window function to identify the duplicated id, and assigned a row number to it, and created a 'new_id' which should be unique.
+Secondly, I created yaml files for stg models, and re-define tests for valid contact_id on stg models "_web__stg.yaml"
+Thirdly, in order to make sure it passed, I use where condition to select validated contact ids in stg_web__transactions.sql
 
 
 

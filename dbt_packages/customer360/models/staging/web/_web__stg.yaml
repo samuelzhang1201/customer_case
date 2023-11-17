@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_web__transactions
+    config:
+      materialized: table
+    columns:
+      - name: id
+        tests:
+          - not_null:
+              config:
+                serverity: error
+                error_if: ">5"
+                warn_if: ">0"
+          - unique
+      - name: contact_id
+        tests: 
+          - relationships:
+                to: ref('stg_sf__contacts')
+                field: new_id

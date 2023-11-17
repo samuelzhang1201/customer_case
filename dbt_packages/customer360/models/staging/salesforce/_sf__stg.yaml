@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_sf__contacts
+    config:
+      materialized: table
+    columns:
+      - name: new_id
+        tests:
+          - not_null
+          - unique
