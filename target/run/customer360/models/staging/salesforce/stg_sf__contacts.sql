@@ -15,6 +15,9 @@
 renamed as (
     select
         id,
+        case 
+            when row_number() over(partition by id)>1 then concat(id,'-',row_number() over(partition by id)) 
+            else id end as new_id,
         username as user_name,
         name,
         gender,

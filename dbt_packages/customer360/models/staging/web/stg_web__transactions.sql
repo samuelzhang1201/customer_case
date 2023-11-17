@@ -12,7 +12,8 @@ renamed as (
         item_count,
         category, 
         _loaded_at_utc
-    from source     
+    from source
+    where contact_id in (select new_id from {{ ref('stg_sf__contacts') }})       
 )
 
 select * from renamed
