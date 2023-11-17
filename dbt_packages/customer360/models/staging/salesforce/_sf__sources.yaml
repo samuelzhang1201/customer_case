@@ -11,5 +11,9 @@ sources:
         columns:
           - name: id
             tests:
-              - unique
+              - unique:
+                  config:
+                    severity: error
+                    error_if: ">5"
+                    wan_if: ">0"
               - not_null

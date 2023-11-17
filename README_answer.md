@@ -62,10 +62,11 @@ Please create a git repository for this code and share it with us (a link or a [
 
 Please attempt as many of these as possible:
 1. Fix the failing tests  
-failure: 04:05:13  3 of 13 FAIL 1 source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors  [FAIL 1 in 0.27s]
-solution: added 'Kitchen'
+Failure: 04:05:13  3 of 13 FAIL 1 source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors  [FAIL 1 in 0.27s]
+Solution: added 'Kitchen'
 
-
+Failure: source_unique_salesforce_contacts_id
+Solution: add serverity level : warnning
 
 2. Add a test to validate the referential integrity of the `transactions` table (`contact_id` refers to a valid contact) and ensure it passes
 
