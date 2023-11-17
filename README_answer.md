@@ -106,8 +106,18 @@ I created another target in profiles.yml which is called 'cloud', and used targe
    + total amount of purchase per category eg. columns like `app_and_games_amount`, `beauty_amount` etc. (refer to `_web__sources.yml` for a static list of product categories)
    
    Please update the `customers` model for these columns. Also, write singular test(s) to validate the logic.
+I have 2 steps:
+ First sept: modified customer sql model as required and commit.
+ second sept: optimize macro and setup tests as required.
+
+
 
 7. Any other improvements you'd like to make?
+
+
+
+
+
 
 8. Think of how you can implement the following (what additional datasets would you use, how will the models look etc). We will explore these add-ons during tech interview stage. Additional points, if you can implement them now!
    + Product Category Recommender - how to implement Next Best Product Category?
