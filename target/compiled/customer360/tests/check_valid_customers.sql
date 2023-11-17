@@ -1,11 +1,11 @@
 select
 	new_id
 from
-	"dbt"."public"."customers"
+	"dbt"."marts"."customers"
 where
 	new_id not in (
 	select
 		new_id
 	from
-		"dbt"."public"."stg_sf__contacts"
+		"dbt"."staging"."stg_sf__contacts"
     )

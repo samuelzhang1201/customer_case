@@ -20,7 +20,7 @@ renamed as (
         category, 
         _loaded_at_utc
     from source
-    where contact_id in (select new_id from "dbt"."public"."stg_sf__contacts")       
+    where contact_id in (select new_id from "dbt"."staging"."stg_sf__contacts")       
 )
 
 select * from renamed

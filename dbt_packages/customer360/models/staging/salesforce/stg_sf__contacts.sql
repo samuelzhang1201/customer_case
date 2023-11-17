@@ -15,7 +15,8 @@ renamed as (
         address, 
         mail as email_address,
         birthdate as birth_date,
-        _loaded_at_utc
+        _loaded_at_utc,
+        now() as updated_at
     from source     
 )
 
