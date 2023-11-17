@@ -84,9 +84,11 @@ Thirdly, in order to make sure it passed, I use where condition to select valida
 
 
 3. We want to ensure our `transactions` data is not older than 1 day. How to do this and when to run these checks?
-
-
-
+add source freness test in _web__sources.yml file as below:
+        loaded_at_field: _loaded_at_utc
+        freshness: # make this a little more strict
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
 
 
 
