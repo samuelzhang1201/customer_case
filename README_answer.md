@@ -93,6 +93,9 @@ add source freness test in _web__sources.yml file as below:
 
 
 4. Add tests for macros
+I have created a test for value > 0 as value_above_zero in macro folder
+
+
 
 5. Macros contain Postgres-specific functions, however our production environment is in Databricks. How would you refactor them, to allow switching between these two syntax?
 
