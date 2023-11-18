@@ -29,7 +29,7 @@ renamed as (
         item_count,
         category, 
         _loaded_at_utc,
-        '8aab817e-c2b2-4c76-8c60-a051c380f27c' as batch_id
+        '09a375b1-409d-41b6-a95c-6e62b6822a92' as batch_id
     from source
     where contact_id in (select new_id from "dbt"."staging"."stg_sf__contacts")       
 )

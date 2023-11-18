@@ -9,3 +9,8 @@ models:
         tests:
           - not_null
           - unique
+
+  - name: masked_contact
+    config:
+      materialized: view
+
