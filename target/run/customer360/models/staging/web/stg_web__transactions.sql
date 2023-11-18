@@ -1,4 +1,5 @@
 
+      
   
     
 
@@ -8,8 +9,14 @@
     as
   
   (
-    with source as (
+    
+
+
+with source as (
     select * from "dbt"."public"."transactions"
+
+
+
 ),
 
 renamed as (
@@ -28,11 +35,13 @@ renamed as (
         amount,
         item_count,
         category, 
-        _loaded_at_utc
+        _loaded_at_utc,
+        '80fa3c74-9845-4286-b629-8fef3a2a244b' as batch_id
     from source
     where contact_id in (select new_id from "dbt"."staging"."stg_sf__contacts")       
 )
 
 select * from renamed
   );
+  
   
