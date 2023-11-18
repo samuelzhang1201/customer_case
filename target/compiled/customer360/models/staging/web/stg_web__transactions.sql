@@ -6,6 +6,10 @@ with source as (
 
 
 
+  where _loaded_at_utc > (select max(_loaded_at_utc) from "dbt"."staging"."stg_web__transactions")
+
+
+
 ),
 
 renamed as (
@@ -25,7 +29,7 @@ renamed as (
         item_count,
         category, 
         _loaded_at_utc,
-        '80fa3c74-9845-4286-b629-8fef3a2a244b' as batch_id
+        '8aab817e-c2b2-4c76-8c60-a051c380f27c' as batch_id
     from source
     where contact_id in (select new_id from "dbt"."staging"."stg_sf__contacts")       
 )

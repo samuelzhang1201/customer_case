@@ -47989,3 +47989,1781 @@ drop table if exists "dbt"."marts"."customers__dbt_backup" cascade
 [0m12:12:03.225648 [debug] [MainThread]: Command `dbt run` succeeded at 12:12:03.225648 after 1.21 seconds
 [0m12:12:03.225648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021264CD4580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002126858EDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212685214E0>]}
 [0m12:12:03.225648 [debug] [MainThread]: Flushing usage events
+[0m14:21:04.449688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020278BA4400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027BEA2D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027BEA2B00>]}
+
+
+============================== 14:21:04.453688 | 8aab817e-c2b2-4c76-8c60-a051c380f27c ==============================
+[0m14:21:04.453688 [info ] [MainThread]: Running with dbt=1.7.2
+[0m14:21:04.453688 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Samuel\\Desktop\\customer360\\integration_tests', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\Samuel\\Desktop\\customer360\\integration_tests\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt build', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:21:04.581197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020274B62E00>]}
+[0m14:21:04.642706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027BE5A5C0>]}
+[0m14:21:04.643706 [info ] [MainThread]: Registered adapter: postgres=1.7.2
+[0m14:21:04.653707 [debug] [MainThread]: checksum: 61e99fc04fd80d06ce91efefd25c0802dcce8a048167599a1a188233d6ce8ed9, vars: {}, profile: , target: , version: 1.7.2
+[0m14:21:04.740215 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m14:21:04.741216 [debug] [MainThread]: Partial parsing: added file: customer360://models\marts\marketing\cross_shopping.sql
+[0m14:21:04.833725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C45C0D0>]}
+[0m14:21:04.845196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C2EAF20>]}
+[0m14:21:04.846196 [info ] [MainThread]: Found 2 seeds, 5 models, 17 tests, 1 snapshot, 2 sources, 0 exposures, 0 metrics, 405 macros, 0 groups, 0 semantic models
+[0m14:21:04.847195 [info ] [MainThread]: 
+[0m14:21:04.848195 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:21:04.849195 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt'
+[0m14:21:04.850195 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt'
+[0m14:21:04.857195 [debug] [ThreadPool]: Using postgres connection "list_dbt"
+[0m14:21:04.857195 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt'
+[0m14:21:04.859195 [debug] [ThreadPool]: Using postgres connection "list_dbt"
+[0m14:21:04.860195 [debug] [ThreadPool]: On list_dbt: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "list_dbt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:21:04.861195 [debug] [ThreadPool]: Using postgres connection "list_dbt"
+[0m14:21:04.861195 [debug] [ThreadPool]: On list_dbt: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "list_dbt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:21:04.862195 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:04.862195 [debug] [ThreadPool]: On list_dbt: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "list_dbt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:21:04.862195 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:04.863196 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:04.917122 [debug] [ThreadPool]: SQL status: SELECT 15 in 0.0 seconds
+[0m14:21:04.918122 [debug] [ThreadPool]: On list_dbt: Close
+[0m14:21:04.920124 [debug] [ThreadPool]: Using postgres connection "list_dbt"
+[0m14:21:04.921124 [debug] [ThreadPool]: On list_dbt: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "list_dbt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:21:04.921124 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:21:04.949122 [debug] [ThreadPool]: SQL status: SELECT 15 in 0.0 seconds
+[0m14:21:04.950122 [debug] [ThreadPool]: On list_dbt: Close
+[0m14:21:05.013211 [debug] [ThreadPool]: SQL status: SELECT 15 in 0.0 seconds
+[0m14:21:05.014211 [debug] [ThreadPool]: On list_dbt: Close
+[0m14:21:05.087414 [debug] [ThreadPool]: SQL status: SELECT 15 in 0.0 seconds
+[0m14:21:05.088414 [debug] [ThreadPool]: On list_dbt: Close
+[0m14:21:05.090413 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_marts'
+[0m14:21:05.090413 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_staging'
+[0m14:21:05.091414 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbt_snapshots'
+[0m14:21:05.095413 [debug] [ThreadPool]: Using postgres connection "list_dbt_marts"
+[0m14:21:05.097417 [debug] [ThreadPool]: Using postgres connection "list_dbt_staging"
+[0m14:21:05.098418 [debug] [ThreadPool]: Using postgres connection "list_dbt_snapshots"
+[0m14:21:05.098418 [debug] [ThreadPool]: On list_dbt_marts: BEGIN
+[0m14:21:05.099418 [debug] [ThreadPool]: On list_dbt_staging: BEGIN
+[0m14:21:05.099418 [debug] [ThreadPool]: On list_dbt_snapshots: BEGIN
+[0m14:21:05.099418 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:05.100418 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:05.100418 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:05.148924 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.149923 [debug] [ThreadPool]: Using postgres connection "list_dbt_marts"
+[0m14:21:05.149923 [debug] [ThreadPool]: On list_dbt_marts: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "list_dbt_marts"} */
+select
+      'dbt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts'
+    union all
+    select
+      'dbt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts'
+    union all
+    select
+      'dbt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts'
+  
+[0m14:21:05.151923 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.0 seconds
+[0m14:21:05.152924 [debug] [ThreadPool]: On list_dbt_marts: ROLLBACK
+[0m14:21:05.153923 [debug] [ThreadPool]: On list_dbt_marts: Close
+[0m14:21:05.153923 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbt_marts, now list_dbt_public)
+[0m14:21:05.156922 [debug] [ThreadPool]: Using postgres connection "list_dbt_public"
+[0m14:21:05.156922 [debug] [ThreadPool]: On list_dbt_public: BEGIN
+[0m14:21:05.156922 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:21:05.179924 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.180924 [debug] [ThreadPool]: Using postgres connection "list_dbt_staging"
+[0m14:21:05.180924 [debug] [ThreadPool]: On list_dbt_staging: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "list_dbt_staging"} */
+select
+      'dbt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'staging'
+    union all
+    select
+      'dbt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'staging'
+    union all
+    select
+      'dbt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'staging'
+  
+[0m14:21:05.182924 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.0 seconds
+[0m14:21:05.183925 [debug] [ThreadPool]: On list_dbt_staging: ROLLBACK
+[0m14:21:05.184924 [debug] [ThreadPool]: On list_dbt_staging: Close
+[0m14:21:05.209928 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.209928 [debug] [ThreadPool]: Using postgres connection "list_dbt_snapshots"
+[0m14:21:05.211431 [debug] [ThreadPool]: On list_dbt_snapshots: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "list_dbt_snapshots"} */
+select
+      'dbt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'dbt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'dbt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+  
+[0m14:21:05.213436 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:05.214436 [debug] [ThreadPool]: On list_dbt_snapshots: ROLLBACK
+[0m14:21:05.214436 [debug] [ThreadPool]: On list_dbt_snapshots: Close
+[0m14:21:05.240436 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.240436 [debug] [ThreadPool]: Using postgres connection "list_dbt_public"
+[0m14:21:05.241436 [debug] [ThreadPool]: On list_dbt_public: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "list_dbt_public"} */
+select
+      'dbt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'dbt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m14:21:05.243434 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.0 seconds
+[0m14:21:05.244437 [debug] [ThreadPool]: On list_dbt_public: ROLLBACK
+[0m14:21:05.244437 [debug] [ThreadPool]: On list_dbt_public: Close
+[0m14:21:05.248436 [debug] [MainThread]: Using postgres connection "master"
+[0m14:21:05.249437 [debug] [MainThread]: On master: BEGIN
+[0m14:21:05.249437 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:21:05.298438 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.299437 [debug] [MainThread]: Using postgres connection "master"
+[0m14:21:05.299437 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:21:05.302438 [debug] [MainThread]: SQL status: SELECT 2 in 0.0 seconds
+[0m14:21:05.304438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C576830>]}
+[0m14:21:05.304438 [debug] [MainThread]: On master: ROLLBACK
+[0m14:21:05.304438 [debug] [MainThread]: Using postgres connection "master"
+[0m14:21:05.305438 [debug] [MainThread]: On master: BEGIN
+[0m14:21:05.305438 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.306438 [debug] [MainThread]: On master: COMMIT
+[0m14:21:05.306438 [debug] [MainThread]: Using postgres connection "master"
+[0m14:21:05.307438 [debug] [MainThread]: On master: COMMIT
+[0m14:21:05.307438 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:05.307438 [debug] [MainThread]: On master: Close
+[0m14:21:05.308440 [info ] [MainThread]: Concurrency: 3 threads (target='local')
+[0m14:21:05.309439 [info ] [MainThread]: 
+[0m14:21:05.311438 [debug] [Thread-1 (]: Began running node seed.integration_tests.contacts
+[0m14:21:05.311438 [debug] [Thread-2 (]: Began running node seed.integration_tests.transactions
+[0m14:21:05.311438 [debug] [Thread-3 (]: Began running node test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5
+[0m14:21:05.312513 [info ] [Thread-1 (]: 1 of 25 START seed file public.contacts ........................................ [RUN]
+[0m14:21:05.312513 [info ] [Thread-2 (]: 2 of 25 START seed file public.transactions .................................... [RUN]
+[0m14:21:05.313513 [info ] [Thread-3 (]: 3 of 25 START test source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen  [RUN]
+[0m14:21:05.313513 [debug] [Thread-1 (]: Acquiring new postgres connection 'seed.integration_tests.contacts'
+[0m14:21:05.314514 [debug] [Thread-2 (]: Acquiring new postgres connection 'seed.integration_tests.transactions'
+[0m14:21:05.315514 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5'
+[0m14:21:05.315514 [debug] [Thread-1 (]: Began compiling node seed.integration_tests.contacts
+[0m14:21:05.315514 [debug] [Thread-2 (]: Began compiling node seed.integration_tests.transactions
+[0m14:21:05.316513 [debug] [Thread-3 (]: Began compiling node test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5
+[0m14:21:05.316513 [debug] [Thread-1 (]: Timing info for seed.integration_tests.contacts (compile): 14:21:05.316513 => 14:21:05.316513
+[0m14:21:05.317514 [debug] [Thread-2 (]: Timing info for seed.integration_tests.transactions (compile): 14:21:05.316513 => 14:21:05.316513
+[0m14:21:05.329697 [debug] [Thread-3 (]: Writing injected SQL for node "test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5"
+[0m14:21:05.329697 [debug] [Thread-1 (]: Began executing node seed.integration_tests.contacts
+[0m14:21:05.330697 [debug] [Thread-2 (]: Began executing node seed.integration_tests.transactions
+[0m14:21:05.340695 [debug] [Thread-3 (]: Timing info for test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5 (compile): 14:21:05.317514 => 14:21:05.340695
+[0m14:21:05.344695 [debug] [Thread-3 (]: Began executing node test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5
+[0m14:21:05.353649 [debug] [Thread-1 (]: Using postgres connection "seed.integration_tests.contacts"
+[0m14:21:05.356650 [debug] [Thread-2 (]: Using postgres connection "seed.integration_tests.transactions"
+[0m14:21:05.366649 [debug] [Thread-3 (]: Writing runtime sql for node "test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5"
+[0m14:21:05.367649 [debug] [Thread-1 (]: On seed.integration_tests.contacts: BEGIN
+[0m14:21:05.367649 [debug] [Thread-2 (]: On seed.integration_tests.transactions: BEGIN
+[0m14:21:05.368649 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:21:05.368649 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m14:21:05.368649 [debug] [Thread-3 (]: Using postgres connection "test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5"
+[0m14:21:05.369649 [debug] [Thread-3 (]: On test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5: BEGIN
+[0m14:21:05.370650 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m14:21:05.418159 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.418159 [debug] [Thread-1 (]: Using postgres connection "seed.integration_tests.contacts"
+[0m14:21:05.419159 [debug] [Thread-1 (]: On seed.integration_tests.contacts: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "seed.integration_tests.contacts"} */
+truncate table "dbt"."public"."contacts"
+[0m14:21:05.424158 [debug] [Thread-1 (]: SQL status: TRUNCATE TABLE in 0.0 seconds
+[0m14:21:05.448160 [debug] [Thread-1 (]: Using postgres connection "seed.integration_tests.contacts"
+[0m14:21:05.448160 [debug] [Thread-1 (]: On seed.integration_tests.contacts: 
+          insert into "dbt"."public"."contacts" ("id", "username", "name", "gender", "address", "mail", "birthdate", "_loaded_at_utc") values
+          (%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s,%s)
+      ...
+[0m14:21:05.449159 [debug] [Thread-1 (]: SQL status: INSERT 0 11 in 0.0 seconds
+[0m14:21:05.453159 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.integration_tests.contacts"
+[0m14:21:05.454159 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.463167 [debug] [Thread-1 (]: On seed.integration_tests.contacts: COMMIT
+[0m14:21:05.463167 [debug] [Thread-2 (]: Using postgres connection "seed.integration_tests.transactions"
+[0m14:21:05.464159 [debug] [Thread-1 (]: Using postgres connection "seed.integration_tests.contacts"
+[0m14:21:05.464159 [debug] [Thread-2 (]: On seed.integration_tests.transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "seed.integration_tests.transactions"} */
+truncate table "dbt"."public"."transactions"
+[0m14:21:05.464159 [debug] [Thread-1 (]: On seed.integration_tests.contacts: COMMIT
+[0m14:21:05.466159 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:05.467162 [debug] [Thread-1 (]: Timing info for seed.integration_tests.contacts (execute): 14:21:05.330697 => 14:21:05.467162
+[0m14:21:05.467162 [debug] [Thread-1 (]: On seed.integration_tests.contacts: Close
+[0m14:21:05.468160 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C4D3CD0>]}
+[0m14:21:05.469159 [info ] [Thread-1 (]: 1 of 25 OK loaded seed file public.contacts .................................... [[32mINSERT 11[0m in 0.15s]
+[0m14:21:05.469159 [debug] [Thread-1 (]: Finished running node seed.integration_tests.contacts
+[0m14:21:05.470160 [debug] [Thread-1 (]: Began running node test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d
+[0m14:21:05.470160 [debug] [Thread-2 (]: SQL status: TRUNCATE TABLE in 0.0 seconds
+[0m14:21:05.471160 [info ] [Thread-1 (]: 4 of 25 START test source_not_null_salesforce_contacts_id ...................... [RUN]
+[0m14:21:05.546786 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.integration_tests.contacts, now test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d)
+[0m14:21:05.570839 [debug] [Thread-2 (]: Using postgres connection "seed.integration_tests.transactions"
+[0m14:21:05.570839 [debug] [Thread-1 (]: Began compiling node test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d
+[0m14:21:05.570839 [debug] [Thread-2 (]: On seed.integration_tests.transactions: 
+          insert into "dbt"."public"."transactions" ("contact_id", "id", "transaction_date", "amount", "item_count", "category", "_loaded_at_utc") values
+          (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%...
+[0m14:21:05.575791 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d"
+[0m14:21:05.577793 [debug] [Thread-1 (]: Timing info for test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d (compile): 14:21:05.571837 => 14:21:05.577793
+[0m14:21:05.577793 [debug] [Thread-1 (]: Began executing node test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d
+[0m14:21:05.579791 [debug] [Thread-1 (]: Writing runtime sql for node "test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d"
+[0m14:21:05.580792 [debug] [Thread-2 (]: SQL status: INSERT 0 102 in 0.0 seconds
+[0m14:21:05.580792 [debug] [Thread-1 (]: Using postgres connection "test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d"
+[0m14:21:05.581791 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.integration_tests.transactions"
+[0m14:21:05.582792 [debug] [Thread-1 (]: On test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d: BEGIN
+[0m14:21:05.582792 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:05.584791 [debug] [Thread-2 (]: On seed.integration_tests.transactions: COMMIT
+[0m14:21:05.584791 [debug] [Thread-2 (]: Using postgres connection "seed.integration_tests.transactions"
+[0m14:21:05.585794 [debug] [Thread-2 (]: On seed.integration_tests.transactions: COMMIT
+[0m14:21:05.587792 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:05.587792 [debug] [Thread-2 (]: Timing info for seed.integration_tests.transactions (execute): 14:21:05.340695 => 14:21:05.587792
+[0m14:21:05.588791 [debug] [Thread-2 (]: On seed.integration_tests.transactions: Close
+[0m14:21:05.588791 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C598D60>]}
+[0m14:21:05.589791 [info ] [Thread-2 (]: 2 of 25 OK loaded seed file public.transactions ................................ [[32mINSERT 102[0m in 0.27s]
+[0m14:21:05.590793 [debug] [Thread-2 (]: Finished running node seed.integration_tests.transactions
+[0m14:21:05.590793 [debug] [Thread-2 (]: Began running node test.customer360.source_not_null_web_transactions_id.88a47bf7e5
+[0m14:21:05.591792 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.591792 [info ] [Thread-2 (]: 5 of 25 START test source_not_null_web_transactions_id ......................... [RUN]
+[0m14:21:05.592793 [debug] [Thread-3 (]: Using postgres connection "test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5"
+[0m14:21:05.592793 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly seed.integration_tests.transactions, now test.customer360.source_not_null_web_transactions_id.88a47bf7e5)
+[0m14:21:05.593792 [debug] [Thread-3 (]: On test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        category as value_field,
+        count(*) as n_records
+
+    from "dbt"."public"."transactions"
+    group by category
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Apps & Games','Beauty','Books','Clothing, Shoes & Accessories','Movies & TV','Sports, Fitness & Outdoors','Kitchen'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:05.593792 [debug] [Thread-2 (]: Began compiling node test.customer360.source_not_null_web_transactions_id.88a47bf7e5
+[0m14:21:05.596791 [debug] [Thread-2 (]: Writing injected SQL for node "test.customer360.source_not_null_web_transactions_id.88a47bf7e5"
+[0m14:21:05.596791 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:05.598795 [debug] [Thread-3 (]: Timing info for test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5 (execute): 14:21:05.356650 => 14:21:05.598795
+[0m14:21:05.598795 [debug] [Thread-2 (]: Timing info for test.customer360.source_not_null_web_transactions_id.88a47bf7e5 (compile): 14:21:05.593792 => 14:21:05.598795
+[0m14:21:05.599794 [debug] [Thread-3 (]: On test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5: ROLLBACK
+[0m14:21:05.599794 [debug] [Thread-2 (]: Began executing node test.customer360.source_not_null_web_transactions_id.88a47bf7e5
+[0m14:21:05.601795 [debug] [Thread-2 (]: Writing runtime sql for node "test.customer360.source_not_null_web_transactions_id.88a47bf7e5"
+[0m14:21:05.601795 [debug] [Thread-3 (]: On test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5: Close
+[0m14:21:05.602794 [debug] [Thread-2 (]: Using postgres connection "test.customer360.source_not_null_web_transactions_id.88a47bf7e5"
+[0m14:21:05.602794 [info ] [Thread-3 (]: 3 of 25 PASS source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen  [[32mPASS[0m in 0.29s]
+[0m14:21:05.603795 [debug] [Thread-2 (]: On test.customer360.source_not_null_web_transactions_id.88a47bf7e5: BEGIN
+[0m14:21:05.603795 [debug] [Thread-3 (]: Finished running node test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5
+[0m14:21:05.604796 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:05.604796 [debug] [Thread-3 (]: Began running node test.customer360.source_unique_salesforce_contacts_id.01cadaaf43
+[0m14:21:05.605795 [info ] [Thread-3 (]: 6 of 25 START test source_unique_salesforce_contacts_id ........................ [RUN]
+[0m14:21:05.606795 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.customer360.source_accepted_values_web_transactions_category__Apps_Games__Beauty__Books__Clothing_Shoes_Accessories__Movies_TV__Sports_Fitness_Outdoors__Kitchen.c88cfdeee5, now test.customer360.source_unique_salesforce_contacts_id.01cadaaf43)
+[0m14:21:05.607795 [debug] [Thread-3 (]: Began compiling node test.customer360.source_unique_salesforce_contacts_id.01cadaaf43
+[0m14:21:05.612299 [debug] [Thread-3 (]: Writing injected SQL for node "test.customer360.source_unique_salesforce_contacts_id.01cadaaf43"
+[0m14:21:05.613302 [debug] [Thread-3 (]: Timing info for test.customer360.source_unique_salesforce_contacts_id.01cadaaf43 (compile): 14:21:05.607795 => 14:21:05.613302
+[0m14:21:05.614303 [debug] [Thread-3 (]: Began executing node test.customer360.source_unique_salesforce_contacts_id.01cadaaf43
+[0m14:21:05.616302 [debug] [Thread-3 (]: Writing runtime sql for node "test.customer360.source_unique_salesforce_contacts_id.01cadaaf43"
+[0m14:21:05.617302 [debug] [Thread-3 (]: Using postgres connection "test.customer360.source_unique_salesforce_contacts_id.01cadaaf43"
+[0m14:21:05.617302 [debug] [Thread-3 (]: On test.customer360.source_unique_salesforce_contacts_id.01cadaaf43: BEGIN
+[0m14:21:05.617302 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:05.636302 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.636302 [debug] [Thread-1 (]: Using postgres connection "test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d"
+[0m14:21:05.637301 [debug] [Thread-1 (]: On test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "dbt"."public"."contacts"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:05.638302 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:05.639302 [debug] [Thread-1 (]: Timing info for test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d (execute): 14:21:05.578791 => 14:21:05.639302
+[0m14:21:05.640302 [debug] [Thread-1 (]: On test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d: ROLLBACK
+[0m14:21:05.640302 [debug] [Thread-1 (]: On test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d: Close
+[0m14:21:05.641302 [info ] [Thread-1 (]: 4 of 25 PASS source_not_null_salesforce_contacts_id ............................ [[32mPASS[0m in 0.09s]
+[0m14:21:05.641302 [debug] [Thread-1 (]: Finished running node test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d
+[0m14:21:05.642302 [debug] [Thread-1 (]: Began running node test.customer360.source_unique_web_transactions_id.ba28079761
+[0m14:21:05.642302 [info ] [Thread-1 (]: 7 of 25 START test source_unique_web_transactions_id ........................... [RUN]
+[0m14:21:05.643303 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer360.source_not_null_salesforce_contacts_id.c732d8a00d, now test.customer360.source_unique_web_transactions_id.ba28079761)
+[0m14:21:05.643303 [debug] [Thread-1 (]: Began compiling node test.customer360.source_unique_web_transactions_id.ba28079761
+[0m14:21:05.647302 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer360.source_unique_web_transactions_id.ba28079761"
+[0m14:21:05.647302 [debug] [Thread-1 (]: Timing info for test.customer360.source_unique_web_transactions_id.ba28079761 (compile): 14:21:05.644302 => 14:21:05.647302
+[0m14:21:05.648303 [debug] [Thread-1 (]: Began executing node test.customer360.source_unique_web_transactions_id.ba28079761
+[0m14:21:05.649302 [debug] [Thread-1 (]: Writing runtime sql for node "test.customer360.source_unique_web_transactions_id.ba28079761"
+[0m14:21:05.650302 [debug] [Thread-1 (]: Using postgres connection "test.customer360.source_unique_web_transactions_id.ba28079761"
+[0m14:21:05.650302 [debug] [Thread-1 (]: On test.customer360.source_unique_web_transactions_id.ba28079761: BEGIN
+[0m14:21:05.651302 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:05.668304 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.669303 [debug] [Thread-2 (]: Using postgres connection "test.customer360.source_not_null_web_transactions_id.88a47bf7e5"
+[0m14:21:05.669303 [debug] [Thread-2 (]: On test.customer360.source_not_null_web_transactions_id.88a47bf7e5: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.source_not_null_web_transactions_id.88a47bf7e5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "dbt"."public"."transactions"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:05.670302 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:05.672302 [debug] [Thread-2 (]: Timing info for test.customer360.source_not_null_web_transactions_id.88a47bf7e5 (execute): 14:21:05.600795 => 14:21:05.671302
+[0m14:21:05.672302 [debug] [Thread-2 (]: On test.customer360.source_not_null_web_transactions_id.88a47bf7e5: ROLLBACK
+[0m14:21:05.672302 [debug] [Thread-2 (]: On test.customer360.source_not_null_web_transactions_id.88a47bf7e5: Close
+[0m14:21:05.673302 [info ] [Thread-2 (]: 5 of 25 PASS source_not_null_web_transactions_id ............................... [[32mPASS[0m in 0.08s]
+[0m14:21:05.674302 [debug] [Thread-2 (]: Finished running node test.customer360.source_not_null_web_transactions_id.88a47bf7e5
+[0m14:21:05.701306 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.702307 [debug] [Thread-3 (]: Using postgres connection "test.customer360.source_unique_salesforce_contacts_id.01cadaaf43"
+[0m14:21:05.702307 [debug] [Thread-3 (]: On test.customer360.source_unique_salesforce_contacts_id.01cadaaf43: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.source_unique_salesforce_contacts_id.01cadaaf43"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) >5 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "dbt"."public"."contacts"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:05.704307 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:05.705306 [debug] [Thread-3 (]: Timing info for test.customer360.source_unique_salesforce_contacts_id.01cadaaf43 (execute): 14:21:05.614303 => 14:21:05.705306
+[0m14:21:05.705306 [debug] [Thread-3 (]: On test.customer360.source_unique_salesforce_contacts_id.01cadaaf43: ROLLBACK
+[0m14:21:05.706306 [debug] [Thread-3 (]: On test.customer360.source_unique_salesforce_contacts_id.01cadaaf43: Close
+[0m14:21:05.706306 [warn ] [Thread-3 (]: 6 of 25 WARN 1 source_unique_salesforce_contacts_id ............................ [[33mWARN 1[0m in 0.10s]
+[0m14:21:05.707306 [debug] [Thread-3 (]: Finished running node test.customer360.source_unique_salesforce_contacts_id.01cadaaf43
+[0m14:21:05.708307 [debug] [Thread-2 (]: Began running node model.customer360.stg_sf__contacts
+[0m14:21:05.708307 [info ] [Thread-2 (]: 8 of 25 START sql table model staging.stg_sf__contacts ......................... [RUN]
+[0m14:21:05.709305 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.customer360.source_not_null_web_transactions_id.88a47bf7e5, now model.customer360.stg_sf__contacts)
+[0m14:21:05.710306 [debug] [Thread-2 (]: Began compiling node model.customer360.stg_sf__contacts
+[0m14:21:05.712812 [debug] [Thread-2 (]: Writing injected SQL for node "model.customer360.stg_sf__contacts"
+[0m14:21:05.713813 [debug] [Thread-2 (]: Timing info for model.customer360.stg_sf__contacts (compile): 14:21:05.710306 => 14:21:05.713813
+[0m14:21:05.713813 [debug] [Thread-2 (]: Began executing node model.customer360.stg_sf__contacts
+[0m14:21:05.735812 [debug] [Thread-2 (]: Writing runtime sql for node "model.customer360.stg_sf__contacts"
+[0m14:21:05.736812 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.736812 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_sf__contacts"
+[0m14:21:05.737814 [debug] [Thread-1 (]: Using postgres connection "test.customer360.source_unique_web_transactions_id.ba28079761"
+[0m14:21:05.737814 [debug] [Thread-2 (]: On model.customer360.stg_sf__contacts: BEGIN
+[0m14:21:05.738813 [debug] [Thread-1 (]: On test.customer360.source_unique_web_transactions_id.ba28079761: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.source_unique_web_transactions_id.ba28079761"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "dbt"."public"."transactions"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:05.738813 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:05.739812 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:05.740814 [debug] [Thread-1 (]: Timing info for test.customer360.source_unique_web_transactions_id.ba28079761 (execute): 14:21:05.648303 => 14:21:05.740814
+[0m14:21:05.741812 [debug] [Thread-1 (]: On test.customer360.source_unique_web_transactions_id.ba28079761: ROLLBACK
+[0m14:21:05.741812 [debug] [Thread-1 (]: On test.customer360.source_unique_web_transactions_id.ba28079761: Close
+[0m14:21:05.742813 [info ] [Thread-1 (]: 7 of 25 PASS source_unique_web_transactions_id ................................. [[32mPASS[0m in 0.10s]
+[0m14:21:05.743812 [debug] [Thread-1 (]: Finished running node test.customer360.source_unique_web_transactions_id.ba28079761
+[0m14:21:05.785812 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.786811 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_sf__contacts"
+[0m14:21:05.786811 [debug] [Thread-2 (]: On model.customer360.stg_sf__contacts: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_sf__contacts"} */
+
+  
+    
+
+  create  table "dbt"."staging"."stg_sf__contacts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with source as (
+    select * from "dbt"."public"."contacts"
+),
+
+renamed as (
+    select
+        id,
+        case 
+            when row_number() over(partition by id)>1 then concat(id,'-',row_number() over(partition by id)) 
+            else id end as new_id,
+        username as user_name,
+        name,
+        gender,
+        address, 
+        mail as email_address,
+        birthdate as birth_date,
+        _loaded_at_utc,
+        now() as updated_at
+    from source     
+)
+
+select * from renamed
+  );
+  
+[0m14:21:05.793811 [debug] [Thread-2 (]: SQL status: SELECT 11 in 0.0 seconds
+[0m14:21:05.798816 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_sf__contacts"
+[0m14:21:05.799816 [debug] [Thread-2 (]: On model.customer360.stg_sf__contacts: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_sf__contacts"} */
+alter table "dbt"."staging"."stg_sf__contacts" rename to "stg_sf__contacts__dbt_backup"
+[0m14:21:05.799816 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:21:05.801816 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_sf__contacts"
+[0m14:21:05.802816 [debug] [Thread-2 (]: On model.customer360.stg_sf__contacts: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_sf__contacts"} */
+alter table "dbt"."staging"."stg_sf__contacts__dbt_tmp" rename to "stg_sf__contacts"
+[0m14:21:05.802816 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:21:05.807816 [debug] [Thread-2 (]: On model.customer360.stg_sf__contacts: COMMIT
+[0m14:21:05.808817 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_sf__contacts"
+[0m14:21:05.808817 [debug] [Thread-2 (]: On model.customer360.stg_sf__contacts: COMMIT
+[0m14:21:05.809816 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:05.814325 [debug] [Thread-2 (]: Applying DROP to: "dbt"."staging"."stg_sf__contacts__dbt_backup"
+[0m14:21:05.817324 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_sf__contacts"
+[0m14:21:05.817324 [debug] [Thread-2 (]: On model.customer360.stg_sf__contacts: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_sf__contacts"} */
+drop table if exists "dbt"."staging"."stg_sf__contacts__dbt_backup" cascade
+[0m14:21:05.819324 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:21:05.820324 [debug] [Thread-2 (]: Timing info for model.customer360.stg_sf__contacts (execute): 14:21:05.713813 => 14:21:05.820324
+[0m14:21:05.821324 [debug] [Thread-2 (]: On model.customer360.stg_sf__contacts: Close
+[0m14:21:05.821324 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C6BD600>]}
+[0m14:21:05.822324 [info ] [Thread-2 (]: 8 of 25 OK created sql table model staging.stg_sf__contacts .................... [[32mSELECT 11[0m in 0.11s]
+[0m14:21:05.823324 [debug] [Thread-2 (]: Finished running node model.customer360.stg_sf__contacts
+[0m14:21:05.823324 [debug] [Thread-3 (]: Began running node test.customer360.not_null_stg_sf__contacts_new_id.346de3589b
+[0m14:21:05.824324 [debug] [Thread-1 (]: Began running node test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2
+[0m14:21:05.824324 [info ] [Thread-3 (]: 9 of 25 START test not_null_stg_sf__contacts_new_id ............................ [RUN]
+[0m14:21:05.824324 [info ] [Thread-1 (]: 10 of 25 START test unique_stg_sf__contacts_new_id ............................. [RUN]
+[0m14:21:05.825323 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.customer360.source_unique_salesforce_contacts_id.01cadaaf43, now test.customer360.not_null_stg_sf__contacts_new_id.346de3589b)
+[0m14:21:05.826324 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer360.source_unique_web_transactions_id.ba28079761, now test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2)
+[0m14:21:05.826324 [debug] [Thread-3 (]: Began compiling node test.customer360.not_null_stg_sf__contacts_new_id.346de3589b
+[0m14:21:05.826324 [debug] [Thread-1 (]: Began compiling node test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2
+[0m14:21:05.829323 [debug] [Thread-3 (]: Writing injected SQL for node "test.customer360.not_null_stg_sf__contacts_new_id.346de3589b"
+[0m14:21:05.833323 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2"
+[0m14:21:05.833323 [debug] [Thread-3 (]: Timing info for test.customer360.not_null_stg_sf__contacts_new_id.346de3589b (compile): 14:21:05.827324 => 14:21:05.833323
+[0m14:21:05.834325 [debug] [Thread-1 (]: Timing info for test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2 (compile): 14:21:05.830324 => 14:21:05.834325
+[0m14:21:05.834325 [debug] [Thread-3 (]: Began executing node test.customer360.not_null_stg_sf__contacts_new_id.346de3589b
+[0m14:21:05.835323 [debug] [Thread-1 (]: Began executing node test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2
+[0m14:21:05.836324 [debug] [Thread-3 (]: Writing runtime sql for node "test.customer360.not_null_stg_sf__contacts_new_id.346de3589b"
+[0m14:21:05.838324 [debug] [Thread-1 (]: Writing runtime sql for node "test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2"
+[0m14:21:05.838324 [debug] [Thread-3 (]: Using postgres connection "test.customer360.not_null_stg_sf__contacts_new_id.346de3589b"
+[0m14:21:05.839323 [debug] [Thread-1 (]: Using postgres connection "test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2"
+[0m14:21:05.839323 [debug] [Thread-3 (]: On test.customer360.not_null_stg_sf__contacts_new_id.346de3589b: BEGIN
+[0m14:21:05.839323 [debug] [Thread-1 (]: On test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2: BEGIN
+[0m14:21:05.840324 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:05.840324 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:05.889324 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.890324 [debug] [Thread-3 (]: Using postgres connection "test.customer360.not_null_stg_sf__contacts_new_id.346de3589b"
+[0m14:21:05.890324 [debug] [Thread-3 (]: On test.customer360.not_null_stg_sf__contacts_new_id.346de3589b: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.not_null_stg_sf__contacts_new_id.346de3589b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select new_id
+from "dbt"."staging"."stg_sf__contacts"
+where new_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:05.891324 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:05.893324 [debug] [Thread-3 (]: Timing info for test.customer360.not_null_stg_sf__contacts_new_id.346de3589b (execute): 14:21:05.835323 => 14:21:05.892324
+[0m14:21:05.893324 [debug] [Thread-3 (]: On test.customer360.not_null_stg_sf__contacts_new_id.346de3589b: ROLLBACK
+[0m14:21:05.893324 [debug] [Thread-3 (]: On test.customer360.not_null_stg_sf__contacts_new_id.346de3589b: Close
+[0m14:21:05.894324 [info ] [Thread-3 (]: 9 of 25 PASS not_null_stg_sf__contacts_new_id .................................. [[32mPASS[0m in 0.07s]
+[0m14:21:05.895325 [debug] [Thread-3 (]: Finished running node test.customer360.not_null_stg_sf__contacts_new_id.346de3589b
+[0m14:21:05.927833 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:05.928833 [debug] [Thread-1 (]: Using postgres connection "test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2"
+[0m14:21:05.928833 [debug] [Thread-1 (]: On test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    new_id as unique_field,
+    count(*) as n_records
+
+from "dbt"."staging"."stg_sf__contacts"
+where new_id is not null
+group by new_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:05.930832 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:05.931833 [debug] [Thread-1 (]: Timing info for test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2 (execute): 14:21:05.836324 => 14:21:05.931833
+[0m14:21:05.931833 [debug] [Thread-1 (]: On test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2: ROLLBACK
+[0m14:21:05.932832 [debug] [Thread-1 (]: On test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2: Close
+[0m14:21:05.932832 [info ] [Thread-1 (]: 10 of 25 PASS unique_stg_sf__contacts_new_id ................................... [[32mPASS[0m in 0.11s]
+[0m14:21:05.933835 [debug] [Thread-1 (]: Finished running node test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2
+[0m14:21:05.934835 [debug] [Thread-2 (]: Began running node model.customer360.stg_web__transactions
+[0m14:21:05.934835 [debug] [Thread-3 (]: Began running node snapshot.customer360.stg_sf__contacts_snapshot
+[0m14:21:05.935835 [info ] [Thread-2 (]: 11 of 25 START sql incremental model staging.stg_web__transactions ............. [RUN]
+[0m14:21:05.935835 [info ] [Thread-3 (]: 12 of 25 START snapshot snapshots.stg_sf__contacts_snapshot .................... [RUN]
+[0m14:21:05.936833 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.customer360.stg_sf__contacts, now model.customer360.stg_web__transactions)
+[0m14:21:05.937833 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.customer360.not_null_stg_sf__contacts_new_id.346de3589b, now snapshot.customer360.stg_sf__contacts_snapshot)
+[0m14:21:05.937833 [debug] [Thread-2 (]: Began compiling node model.customer360.stg_web__transactions
+[0m14:21:05.938833 [debug] [Thread-3 (]: Began compiling node snapshot.customer360.stg_sf__contacts_snapshot
+[0m14:21:05.944833 [debug] [Thread-2 (]: Writing injected SQL for node "model.customer360.stg_web__transactions"
+[0m14:21:05.946835 [debug] [Thread-3 (]: Timing info for snapshot.customer360.stg_sf__contacts_snapshot (compile): 14:21:05.944833 => 14:21:05.946835
+[0m14:21:05.947833 [debug] [Thread-3 (]: Began executing node snapshot.customer360.stg_sf__contacts_snapshot
+[0m14:21:05.972563 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:05.973564 [debug] [Thread-2 (]: Timing info for model.customer360.stg_web__transactions (compile): 14:21:05.938833 => 14:21:05.973564
+[0m14:21:05.973564 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: BEGIN
+[0m14:21:05.974564 [debug] [Thread-2 (]: Began executing node model.customer360.stg_web__transactions
+[0m14:21:05.974564 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:05.993563 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_web__transactions"
+[0m14:21:05.993563 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_web__transactions"} */
+
+    
+  
+    
+
+  create temporary table "stg_web__transactions__dbt_tmp142105988563"
+  
+  
+    as
+  
+  (
+    
+
+
+with source as (
+    select * from "dbt"."public"."transactions"
+
+
+
+  where _loaded_at_utc > (select max(_loaded_at_utc) from "dbt"."staging"."stg_web__transactions")
+
+
+
+),
+
+renamed as (
+    select
+        id,
+        contact_id,
+        
+
+    
+
+        to_timestamp(transaction_date,'YYYY-MM-DD HH24:MI:SS.MS') :: timestamp at TIME zone 'UTC'
+
+    
+
+ as transaction_date,
+        amount,
+        item_count,
+        category, 
+        _loaded_at_utc,
+        '8aab817e-c2b2-4c76-8c60-a051c380f27c' as batch_id
+    from source
+    where contact_id in (select new_id from "dbt"."staging"."stg_sf__contacts")       
+)
+
+select * from renamed
+  );
+  
+  
+[0m14:21:05.994563 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:06.042170 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.042170 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.043164 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "snapshot.customer360.stg_sf__contacts_snapshot"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbt".INFORMATION_SCHEMA.columns
+      where table_name = 'stg_sf__contacts_snapshot'
+        
+        and table_schema = 'snapshots'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.048168 [debug] [Thread-3 (]: SQL status: SELECT 14 in 0.0 seconds
+[0m14:21:06.056105 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.056105 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "snapshot.customer360.stg_sf__contacts_snapshot"} */
+
+        
+  
+    
+
+  create temporary table "stg_sf__contacts_snapshot__dbt_tmp142106052175"
+  
+  
+    as
+  
+  (
+    with snapshot_query as (
+
+        
+
+
+
+
+
+select * from "dbt"."staging"."stg_sf__contacts"
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *,
+            new_id as dbt_unique_key
+
+        from "dbt"."snapshots"."stg_sf__contacts_snapshot"
+        where dbt_valid_to is null
+
+    ),
+
+    insertions_source_data as (
+
+        select
+            *,
+            new_id as dbt_unique_key,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            nullif(updated_at, updated_at) as dbt_valid_to,
+            md5(coalesce(cast(new_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select
+            *,
+            new_id as dbt_unique_key,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            updated_at as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data on snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+        where snapshotted_data.dbt_unique_key is null
+           or (
+                snapshotted_data.dbt_unique_key is not null
+            and (
+                (snapshotted_data.dbt_valid_from < source_data.updated_at)
+            )
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data on snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.updated_at)
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+  );
+  
+    
+[0m14:21:06.060097 [debug] [Thread-3 (]: SQL status: SELECT 22 in 0.0 seconds
+[0m14:21:06.062105 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.062105 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "snapshot.customer360.stg_sf__contacts_snapshot"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'stg_sf__contacts_snapshot__dbt_tmp142106052175'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.064096 [debug] [Thread-3 (]: SQL status: SELECT 16 in 0.0 seconds
+[0m14:21:06.067107 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.067107 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "snapshot.customer360.stg_sf__contacts_snapshot"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbt".INFORMATION_SCHEMA.columns
+      where table_name = 'stg_sf__contacts_snapshot'
+        
+        and table_schema = 'snapshots'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.069103 [debug] [Thread-3 (]: SQL status: SELECT 14 in 0.0 seconds
+[0m14:21:06.072096 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.072096 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "snapshot.customer360.stg_sf__contacts_snapshot"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'stg_sf__contacts_snapshot__dbt_tmp142106052175'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.074096 [debug] [Thread-3 (]: SQL status: SELECT 16 in 0.0 seconds
+[0m14:21:06.076097 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.077096 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "snapshot.customer360.stg_sf__contacts_snapshot"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbt".INFORMATION_SCHEMA.columns
+      where table_name = 'stg_sf__contacts_snapshot'
+        
+        and table_schema = 'snapshots'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.079096 [debug] [Thread-3 (]: SQL status: SELECT 14 in 0.0 seconds
+[0m14:21:06.083117 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.084117 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "snapshot.customer360.stg_sf__contacts_snapshot"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'stg_sf__contacts_snapshot__dbt_tmp142106052175'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.086114 [debug] [Thread-3 (]: SQL status: SELECT 16 in 0.0 seconds
+[0m14:21:06.090106 [debug] [Thread-3 (]: Writing runtime sql for node "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.091103 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.091103 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "snapshot.customer360.stg_sf__contacts_snapshot"} */
+
+      update "dbt"."snapshots"."stg_sf__contacts_snapshot"
+    set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+    from "stg_sf__contacts_snapshot__dbt_tmp142106052175" as DBT_INTERNAL_SOURCE
+    where DBT_INTERNAL_SOURCE.dbt_scd_id::text = "dbt"."snapshots"."stg_sf__contacts_snapshot".dbt_scd_id::text
+      and DBT_INTERNAL_SOURCE.dbt_change_type::text in ('update'::text, 'delete'::text)
+      and "dbt"."snapshots"."stg_sf__contacts_snapshot".dbt_valid_to is null;
+
+    insert into "dbt"."snapshots"."stg_sf__contacts_snapshot" ("id", "new_id", "user_name", "name", "gender", "address", "email_address", "birth_date", "_loaded_at_utc", "updated_at", "dbt_updated_at", "dbt_valid_from", "dbt_valid_to", "dbt_scd_id")
+    select DBT_INTERNAL_SOURCE."id",DBT_INTERNAL_SOURCE."new_id",DBT_INTERNAL_SOURCE."user_name",DBT_INTERNAL_SOURCE."name",DBT_INTERNAL_SOURCE."gender",DBT_INTERNAL_SOURCE."address",DBT_INTERNAL_SOURCE."email_address",DBT_INTERNAL_SOURCE."birth_date",DBT_INTERNAL_SOURCE."_loaded_at_utc",DBT_INTERNAL_SOURCE."updated_at",DBT_INTERNAL_SOURCE."dbt_updated_at",DBT_INTERNAL_SOURCE."dbt_valid_from",DBT_INTERNAL_SOURCE."dbt_valid_to",DBT_INTERNAL_SOURCE."dbt_scd_id"
+    from "stg_sf__contacts_snapshot__dbt_tmp142106052175" as DBT_INTERNAL_SOURCE
+    where DBT_INTERNAL_SOURCE.dbt_change_type::text = 'insert'::text;
+
+  
+[0m14:21:06.092104 [debug] [Thread-3 (]: SQL status: INSERT 0 11 in 0.0 seconds
+[0m14:21:06.094102 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: COMMIT
+[0m14:21:06.094102 [debug] [Thread-3 (]: Using postgres connection "snapshot.customer360.stg_sf__contacts_snapshot"
+[0m14:21:06.095101 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: COMMIT
+[0m14:21:06.095101 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:06.097097 [debug] [Thread-3 (]: Timing info for snapshot.customer360.stg_sf__contacts_snapshot (execute): 14:21:05.948833 => 14:21:06.097097
+[0m14:21:06.098104 [debug] [Thread-3 (]: On snapshot.customer360.stg_sf__contacts_snapshot: Close
+[0m14:21:06.098104 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C69F370>]}
+[0m14:21:06.099103 [info ] [Thread-3 (]: 12 of 25 OK snapshotted snapshots.stg_sf__contacts_snapshot .................... [[32mINSERT 0 11[0m in 0.16s]
+[0m14:21:06.100138 [debug] [Thread-3 (]: Finished running node snapshot.customer360.stg_sf__contacts_snapshot
+[0m14:21:06.106139 [debug] [Thread-2 (]: SQL status: SELECT 0 in 0.0 seconds
+[0m14:21:06.108139 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_web__transactions"
+[0m14:21:06.109141 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: BEGIN
+[0m14:21:06.109141 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.110140 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_web__transactions"
+[0m14:21:06.110140 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_web__transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'stg_web__transactions__dbt_tmp142105988563'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.114539 [debug] [Thread-2 (]: SQL status: SELECT 8 in 0.0 seconds
+[0m14:21:06.117503 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_web__transactions"
+[0m14:21:06.117503 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_web__transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbt".INFORMATION_SCHEMA.columns
+      where table_name = 'stg_web__transactions'
+        
+        and table_schema = 'staging'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.119503 [debug] [Thread-2 (]: SQL status: SELECT 8 in 0.0 seconds
+[0m14:21:06.128505 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_web__transactions"
+[0m14:21:06.128505 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_web__transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'stg_web__transactions__dbt_tmp142105988563'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.131503 [debug] [Thread-2 (]: SQL status: SELECT 8 in 0.0 seconds
+[0m14:21:06.133503 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_web__transactions"
+[0m14:21:06.134503 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_web__transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbt".INFORMATION_SCHEMA.columns
+      where table_name = 'stg_web__transactions'
+        
+        and table_schema = 'staging'
+        
+      order by ordinal_position
+
+  
+[0m14:21:06.136503 [debug] [Thread-2 (]: SQL status: SELECT 8 in 0.0 seconds
+[0m14:21:06.142503 [debug] [Thread-2 (]: 
+    In "dbt"."staging"."stg_web__transactions":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m14:21:06.152503 [debug] [Thread-2 (]: Writing runtime sql for node "model.customer360.stg_web__transactions"
+[0m14:21:06.153503 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_web__transactions"
+[0m14:21:06.153503 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.stg_web__transactions"} */
+
+      
+        
+            delete from "dbt"."staging"."stg_web__transactions"
+            where (
+                id) in (
+                select (id)
+                from "stg_web__transactions__dbt_tmp142105988563"
+            );
+
+        
+    
+
+    insert into "dbt"."staging"."stg_web__transactions" ("id", "contact_id", "transaction_date", "amount", "item_count", "category", "_loaded_at_utc", "batch_id")
+    (
+        select "id", "contact_id", "transaction_date", "amount", "item_count", "category", "_loaded_at_utc", "batch_id"
+        from "stg_web__transactions__dbt_tmp142105988563"
+    )
+  
+[0m14:21:06.154503 [debug] [Thread-2 (]: SQL status: INSERT 0 0 in 0.0 seconds
+[0m14:21:06.155503 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: COMMIT
+[0m14:21:06.156503 [debug] [Thread-2 (]: Using postgres connection "model.customer360.stg_web__transactions"
+[0m14:21:06.156503 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: COMMIT
+[0m14:21:06.157503 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:06.157503 [debug] [Thread-2 (]: Timing info for model.customer360.stg_web__transactions (execute): 14:21:05.975563 => 14:21:06.157503
+[0m14:21:06.158503 [debug] [Thread-2 (]: On model.customer360.stg_web__transactions: Close
+[0m14:21:06.159503 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C69E8F0>]}
+[0m14:21:06.159503 [info ] [Thread-2 (]: 11 of 25 OK created sql incremental model staging.stg_web__transactions ........ [[32mINSERT 0 0[0m in 0.22s]
+[0m14:21:06.160775 [debug] [Thread-2 (]: Finished running node model.customer360.stg_web__transactions
+[0m14:21:06.160775 [debug] [Thread-1 (]: Began running node test.customer360.not_null_stg_web__transactions_id.7beb436b49
+[0m14:21:06.160775 [debug] [Thread-3 (]: Began running node test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53
+[0m14:21:06.161783 [debug] [Thread-2 (]: Began running node test.customer360.unique_stg_web__transactions_id.5518387fef
+[0m14:21:06.161783 [info ] [Thread-1 (]: 13 of 25 START test not_null_stg_web__transactions_id .......................... [RUN]
+[0m14:21:06.162783 [info ] [Thread-3 (]: 14 of 25 START test relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_  [RUN]
+[0m14:21:06.163783 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer360.unique_stg_sf__contacts_new_id.9ef2d6e9a2, now test.customer360.not_null_stg_web__transactions_id.7beb436b49)
+[0m14:21:06.162783 [info ] [Thread-2 (]: 15 of 25 START test unique_stg_web__transactions_id ............................ [RUN]
+[0m14:21:06.163783 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly snapshot.customer360.stg_sf__contacts_snapshot, now test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53)
+[0m14:21:06.164783 [debug] [Thread-1 (]: Began compiling node test.customer360.not_null_stg_web__transactions_id.7beb436b49
+[0m14:21:06.164783 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.customer360.stg_web__transactions, now test.customer360.unique_stg_web__transactions_id.5518387fef)
+[0m14:21:06.164783 [debug] [Thread-3 (]: Began compiling node test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53
+[0m14:21:06.168783 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer360.not_null_stg_web__transactions_id.7beb436b49"
+[0m14:21:06.168783 [debug] [Thread-2 (]: Began compiling node test.customer360.unique_stg_web__transactions_id.5518387fef
+[0m14:21:06.173821 [debug] [Thread-3 (]: Writing injected SQL for node "test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53"
+[0m14:21:06.177867 [debug] [Thread-2 (]: Writing injected SQL for node "test.customer360.unique_stg_web__transactions_id.5518387fef"
+[0m14:21:06.178859 [debug] [Thread-1 (]: Timing info for test.customer360.not_null_stg_web__transactions_id.7beb436b49 (compile): 14:21:06.165783 => 14:21:06.177867
+[0m14:21:06.179849 [debug] [Thread-3 (]: Timing info for test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53 (compile): 14:21:06.168783 => 14:21:06.178859
+[0m14:21:06.179849 [debug] [Thread-2 (]: Timing info for test.customer360.unique_stg_web__transactions_id.5518387fef (compile): 14:21:06.174815 => 14:21:06.179849
+[0m14:21:06.179849 [debug] [Thread-1 (]: Began executing node test.customer360.not_null_stg_web__transactions_id.7beb436b49
+[0m14:21:06.180822 [debug] [Thread-3 (]: Began executing node test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53
+[0m14:21:06.180822 [debug] [Thread-2 (]: Began executing node test.customer360.unique_stg_web__transactions_id.5518387fef
+[0m14:21:06.182820 [debug] [Thread-1 (]: Writing runtime sql for node "test.customer360.not_null_stg_web__transactions_id.7beb436b49"
+[0m14:21:06.183823 [debug] [Thread-3 (]: Writing runtime sql for node "test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53"
+[0m14:21:06.185819 [debug] [Thread-2 (]: Writing runtime sql for node "test.customer360.unique_stg_web__transactions_id.5518387fef"
+[0m14:21:06.186820 [debug] [Thread-1 (]: Using postgres connection "test.customer360.not_null_stg_web__transactions_id.7beb436b49"
+[0m14:21:06.187820 [debug] [Thread-1 (]: On test.customer360.not_null_stg_web__transactions_id.7beb436b49: BEGIN
+[0m14:21:06.187820 [debug] [Thread-3 (]: Using postgres connection "test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53"
+[0m14:21:06.187820 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:06.188819 [debug] [Thread-2 (]: Using postgres connection "test.customer360.unique_stg_web__transactions_id.5518387fef"
+[0m14:21:06.188819 [debug] [Thread-3 (]: On test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53: BEGIN
+[0m14:21:06.189822 [debug] [Thread-2 (]: On test.customer360.unique_stg_web__transactions_id.5518387fef: BEGIN
+[0m14:21:06.189822 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:06.190821 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:06.246079 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.247080 [debug] [Thread-1 (]: Using postgres connection "test.customer360.not_null_stg_web__transactions_id.7beb436b49"
+[0m14:21:06.247080 [debug] [Thread-1 (]: On test.customer360.not_null_stg_web__transactions_id.7beb436b49: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.not_null_stg_web__transactions_id.7beb436b49"} */
+select
+      count(*) as failures,
+      count(*) >0 as should_warn,
+      count(*) >5 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "dbt"."staging"."stg_web__transactions"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:06.248079 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.249080 [debug] [Thread-1 (]: Timing info for test.customer360.not_null_stg_web__transactions_id.7beb436b49 (execute): 14:21:06.180822 => 14:21:06.249080
+[0m14:21:06.250080 [debug] [Thread-1 (]: On test.customer360.not_null_stg_web__transactions_id.7beb436b49: ROLLBACK
+[0m14:21:06.250080 [debug] [Thread-1 (]: On test.customer360.not_null_stg_web__transactions_id.7beb436b49: Close
+[0m14:21:06.251079 [info ] [Thread-1 (]: 13 of 25 PASS not_null_stg_web__transactions_id ................................ [[32mPASS[0m in 0.09s]
+[0m14:21:06.252080 [debug] [Thread-1 (]: Finished running node test.customer360.not_null_stg_web__transactions_id.7beb436b49
+[0m14:21:06.252080 [debug] [Thread-1 (]: Began running node test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499
+[0m14:21:06.253079 [info ] [Thread-1 (]: 16 of 25 START test value_above_zero_stg_web__transactions_amount .............. [RUN]
+[0m14:21:06.253079 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer360.not_null_stg_web__transactions_id.7beb436b49, now test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499)
+[0m14:21:06.254081 [debug] [Thread-1 (]: Began compiling node test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499
+[0m14:21:06.258081 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499"
+[0m14:21:06.258081 [debug] [Thread-1 (]: Timing info for test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499 (compile): 14:21:06.254081 => 14:21:06.258081
+[0m14:21:06.259081 [debug] [Thread-1 (]: Began executing node test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499
+[0m14:21:06.260080 [debug] [Thread-1 (]: Writing runtime sql for node "test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499"
+[0m14:21:06.261080 [debug] [Thread-1 (]: Using postgres connection "test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499"
+[0m14:21:06.261080 [debug] [Thread-1 (]: On test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499: BEGIN
+[0m14:21:06.262080 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:06.272080 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.273081 [debug] [Thread-3 (]: Using postgres connection "test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53"
+[0m14:21:06.273081 [debug] [Thread-3 (]: On test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select contact_id as from_field
+    from "dbt"."staging"."stg_web__transactions"
+    where contact_id is not null
+),
+
+parent as (
+    select new_id as to_field
+    from "dbt"."staging"."stg_sf__contacts"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:06.275079 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.276079 [debug] [Thread-3 (]: Timing info for test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53 (execute): 14:21:06.182820 => 14:21:06.276079
+[0m14:21:06.276079 [debug] [Thread-3 (]: On test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53: ROLLBACK
+[0m14:21:06.277079 [debug] [Thread-3 (]: On test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53: Close
+[0m14:21:06.277079 [info ] [Thread-3 (]: 14 of 25 PASS relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_  [[32mPASS[0m in 0.11s]
+[0m14:21:06.278080 [debug] [Thread-3 (]: Finished running node test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53
+[0m14:21:06.304091 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.305091 [debug] [Thread-2 (]: Using postgres connection "test.customer360.unique_stg_web__transactions_id.5518387fef"
+[0m14:21:06.305091 [debug] [Thread-2 (]: On test.customer360.unique_stg_web__transactions_id.5518387fef: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.unique_stg_web__transactions_id.5518387fef"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "dbt"."staging"."stg_web__transactions"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:06.307087 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.308087 [debug] [Thread-2 (]: Timing info for test.customer360.unique_stg_web__transactions_id.5518387fef (execute): 14:21:06.184819 => 14:21:06.308087
+[0m14:21:06.309086 [debug] [Thread-2 (]: On test.customer360.unique_stg_web__transactions_id.5518387fef: ROLLBACK
+[0m14:21:06.309086 [debug] [Thread-2 (]: On test.customer360.unique_stg_web__transactions_id.5518387fef: Close
+[0m14:21:06.310086 [info ] [Thread-2 (]: 15 of 25 PASS unique_stg_web__transactions_id .................................. [[32mPASS[0m in 0.15s]
+[0m14:21:06.311111 [debug] [Thread-2 (]: Finished running node test.customer360.unique_stg_web__transactions_id.5518387fef
+[0m14:21:06.348599 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.348599 [debug] [Thread-1 (]: Using postgres connection "test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499"
+[0m14:21:06.349599 [debug] [Thread-1 (]: On test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    select 
+    * 
+    from "dbt"."staging"."stg_web__transactions"
+    where amount <= 0
+
+      
+    ) dbt_internal_test
+[0m14:21:06.350602 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.351600 [debug] [Thread-1 (]: Timing info for test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499 (execute): 14:21:06.259081 => 14:21:06.351600
+[0m14:21:06.352599 [debug] [Thread-1 (]: On test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499: ROLLBACK
+[0m14:21:06.352599 [debug] [Thread-1 (]: On test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499: Close
+[0m14:21:06.353598 [info ] [Thread-1 (]: 16 of 25 PASS value_above_zero_stg_web__transactions_amount .................... [[32mPASS[0m in 0.10s]
+[0m14:21:06.353598 [debug] [Thread-1 (]: Finished running node test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499
+[0m14:21:06.354599 [debug] [Thread-3 (]: Began running node model.customer360.contacts_joined_with_transactions
+[0m14:21:06.354599 [debug] [Thread-2 (]: Began running node model.customer360.cross_shopping
+[0m14:21:06.355598 [info ] [Thread-3 (]: 17 of 25 START sql view model marts.contacts_joined_with_transactions .......... [RUN]
+[0m14:21:06.355598 [info ] [Thread-2 (]: 18 of 25 START sql table model marts.cross_shopping ............................ [RUN]
+[0m14:21:06.356599 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.customer360.relationships_stg_web__transactions_contact_id__new_id__ref_stg_sf__contacts_.7b3e37fd53, now model.customer360.contacts_joined_with_transactions)
+[0m14:21:06.357598 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.customer360.unique_stg_web__transactions_id.5518387fef, now model.customer360.cross_shopping)
+[0m14:21:06.357598 [debug] [Thread-3 (]: Began compiling node model.customer360.contacts_joined_with_transactions
+[0m14:21:06.357598 [debug] [Thread-2 (]: Began compiling node model.customer360.cross_shopping
+[0m14:21:06.360603 [debug] [Thread-3 (]: Writing injected SQL for node "model.customer360.contacts_joined_with_transactions"
+[0m14:21:06.362603 [debug] [Thread-2 (]: Writing injected SQL for node "model.customer360.cross_shopping"
+[0m14:21:06.363600 [debug] [Thread-3 (]: Timing info for model.customer360.contacts_joined_with_transactions (compile): 14:21:06.358600 => 14:21:06.363600
+[0m14:21:06.364600 [debug] [Thread-2 (]: Timing info for model.customer360.cross_shopping (compile): 14:21:06.360603 => 14:21:06.363600
+[0m14:21:06.364600 [debug] [Thread-3 (]: Began executing node model.customer360.contacts_joined_with_transactions
+[0m14:21:06.364600 [debug] [Thread-2 (]: Began executing node model.customer360.cross_shopping
+[0m14:21:06.421472 [debug] [Thread-3 (]: Writing runtime sql for node "model.customer360.contacts_joined_with_transactions"
+[0m14:21:06.424439 [debug] [Thread-2 (]: Writing runtime sql for node "model.customer360.cross_shopping"
+[0m14:21:06.425438 [debug] [Thread-3 (]: Using postgres connection "model.customer360.contacts_joined_with_transactions"
+[0m14:21:06.426468 [debug] [Thread-3 (]: On model.customer360.contacts_joined_with_transactions: BEGIN
+[0m14:21:06.426468 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:06.426468 [debug] [Thread-2 (]: Using postgres connection "model.customer360.cross_shopping"
+[0m14:21:06.427469 [debug] [Thread-2 (]: On model.customer360.cross_shopping: BEGIN
+[0m14:21:06.427469 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:06.476439 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.477439 [debug] [Thread-3 (]: Using postgres connection "model.customer360.contacts_joined_with_transactions"
+[0m14:21:06.477439 [debug] [Thread-3 (]: On model.customer360.contacts_joined_with_transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.contacts_joined_with_transactions"} */
+
+  create view "dbt"."marts"."contacts_joined_with_transactions__dbt_tmp"
+    
+    
+  as (
+    SELECT 
+    contacts.*,
+    transactions.id as transaction_id,
+    transactions.transaction_date,
+    transactions.amount,
+    transactions.item_count,
+    transactions.category
+FROM "dbt"."staging"."stg_web__transactions" as transactions
+LEFT JOIN "dbt"."staging"."stg_sf__contacts" as contacts ON contacts.new_id = transactions.contact_id
+  );
+[0m14:21:06.479439 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m14:21:06.482439 [debug] [Thread-3 (]: Using postgres connection "model.customer360.contacts_joined_with_transactions"
+[0m14:21:06.482439 [debug] [Thread-3 (]: On model.customer360.contacts_joined_with_transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.contacts_joined_with_transactions"} */
+alter table "dbt"."marts"."contacts_joined_with_transactions__dbt_tmp" rename to "contacts_joined_with_transactions"
+[0m14:21:06.483439 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:21:06.484438 [debug] [Thread-3 (]: On model.customer360.contacts_joined_with_transactions: COMMIT
+[0m14:21:06.484438 [debug] [Thread-3 (]: Using postgres connection "model.customer360.contacts_joined_with_transactions"
+[0m14:21:06.485439 [debug] [Thread-3 (]: On model.customer360.contacts_joined_with_transactions: COMMIT
+[0m14:21:06.486438 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:06.488438 [debug] [Thread-3 (]: Applying DROP to: "dbt"."marts"."contacts_joined_with_transactions__dbt_backup"
+[0m14:21:06.490440 [debug] [Thread-3 (]: Using postgres connection "model.customer360.contacts_joined_with_transactions"
+[0m14:21:06.490440 [debug] [Thread-3 (]: On model.customer360.contacts_joined_with_transactions: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.contacts_joined_with_transactions"} */
+drop view if exists "dbt"."marts"."contacts_joined_with_transactions__dbt_backup" cascade
+[0m14:21:06.491438 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m14:21:06.492437 [debug] [Thread-3 (]: Timing info for model.customer360.contacts_joined_with_transactions (execute): 14:21:06.365602 => 14:21:06.492437
+[0m14:21:06.493437 [debug] [Thread-3 (]: On model.customer360.contacts_joined_with_transactions: Close
+[0m14:21:06.493437 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C7DB910>]}
+[0m14:21:06.494440 [info ] [Thread-3 (]: 17 of 25 OK created sql view model marts.contacts_joined_with_transactions ..... [[32mCREATE VIEW[0m in 0.14s]
+[0m14:21:06.495438 [debug] [Thread-3 (]: Finished running node model.customer360.contacts_joined_with_transactions
+[0m14:21:06.495438 [debug] [Thread-1 (]: Began running node test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca
+[0m14:21:06.495438 [debug] [Thread-3 (]: Began running node test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5
+[0m14:21:06.496437 [info ] [Thread-1 (]: 19 of 25 START test not_null_contacts_joined_with_transactions_transaction_id .. [RUN]
+[0m14:21:06.496437 [info ] [Thread-3 (]: 20 of 25 START test unique_contacts_joined_with_transactions_transaction_id .... [RUN]
+[0m14:21:06.497437 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer360.value_above_zero_stg_web__transactions_amount.1840ccd499, now test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca)
+[0m14:21:06.498441 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.customer360.contacts_joined_with_transactions, now test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5)
+[0m14:21:06.498441 [debug] [Thread-1 (]: Began compiling node test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca
+[0m14:21:06.498441 [debug] [Thread-3 (]: Began compiling node test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5
+[0m14:21:06.502477 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca"
+[0m14:21:06.504478 [debug] [Thread-3 (]: Writing injected SQL for node "test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5"
+[0m14:21:06.505478 [debug] [Thread-1 (]: Timing info for test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca (compile): 14:21:06.499441 => 14:21:06.505478
+[0m14:21:06.506486 [debug] [Thread-3 (]: Timing info for test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5 (compile): 14:21:06.502477 => 14:21:06.505478
+[0m14:21:06.506486 [debug] [Thread-1 (]: Began executing node test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca
+[0m14:21:06.506486 [debug] [Thread-3 (]: Began executing node test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5
+[0m14:21:06.508443 [debug] [Thread-1 (]: Writing runtime sql for node "test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca"
+[0m14:21:06.511441 [debug] [Thread-3 (]: Writing runtime sql for node "test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5"
+[0m14:21:06.511441 [debug] [Thread-1 (]: Using postgres connection "test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca"
+[0m14:21:06.512442 [debug] [Thread-1 (]: On test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca: BEGIN
+[0m14:21:06.512948 [debug] [Thread-3 (]: Using postgres connection "test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5"
+[0m14:21:06.512948 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:06.512948 [debug] [Thread-3 (]: On test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5: BEGIN
+[0m14:21:06.513953 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:06.514953 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.514953 [debug] [Thread-2 (]: Using postgres connection "model.customer360.cross_shopping"
+[0m14:21:06.515953 [debug] [Thread-2 (]: On model.customer360.cross_shopping: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.cross_shopping"} */
+
+  
+    
+
+  create  table "dbt"."marts"."cross_shopping__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with combo as (
+select
+	a.contact_id,
+	a.category as cate_01
+	, b.category as cate_02
+from
+	"dbt"."staging"."stg_web__transactions" a 
+join 
+    "dbt"."staging"."stg_web__transactions" b
+on a.contact_id = b.contact_id 
+and a.category > b.category 
+)
+select 
+cate_01
+,cate_02
+, count(distinct contact_id)
+from
+combo
+group by 1,2
+order by 3 desc
+  );
+  
+[0m14:21:06.522953 [debug] [Thread-2 (]: SQL status: SELECT 20 in 0.0 seconds
+[0m14:21:06.525952 [debug] [Thread-2 (]: Using postgres connection "model.customer360.cross_shopping"
+[0m14:21:06.525952 [debug] [Thread-2 (]: On model.customer360.cross_shopping: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.cross_shopping"} */
+alter table "dbt"."marts"."cross_shopping__dbt_tmp" rename to "cross_shopping"
+[0m14:21:06.526952 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:21:06.527952 [debug] [Thread-2 (]: On model.customer360.cross_shopping: COMMIT
+[0m14:21:06.528953 [debug] [Thread-2 (]: Using postgres connection "model.customer360.cross_shopping"
+[0m14:21:06.528953 [debug] [Thread-2 (]: On model.customer360.cross_shopping: COMMIT
+[0m14:21:06.529953 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:06.531952 [debug] [Thread-2 (]: Applying DROP to: "dbt"."marts"."cross_shopping__dbt_backup"
+[0m14:21:06.531952 [debug] [Thread-2 (]: Using postgres connection "model.customer360.cross_shopping"
+[0m14:21:06.532952 [debug] [Thread-2 (]: On model.customer360.cross_shopping: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.cross_shopping"} */
+drop table if exists "dbt"."marts"."cross_shopping__dbt_backup" cascade
+[0m14:21:06.532952 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:21:06.533953 [debug] [Thread-2 (]: Timing info for model.customer360.cross_shopping (execute): 14:21:06.422476 => 14:21:06.533953
+[0m14:21:06.534953 [debug] [Thread-2 (]: On model.customer360.cross_shopping: Close
+[0m14:21:06.534953 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C5EA530>]}
+[0m14:21:06.535953 [info ] [Thread-2 (]: 18 of 25 OK created sql table model marts.cross_shopping ....................... [[32mSELECT 20[0m in 0.18s]
+[0m14:21:06.536955 [debug] [Thread-2 (]: Finished running node model.customer360.cross_shopping
+[0m14:21:06.560973 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.561980 [debug] [Thread-1 (]: Using postgres connection "test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca"
+[0m14:21:06.561980 [debug] [Thread-1 (]: On test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca"} */
+select
+      count(*) as failures,
+      count(*) >0 as should_warn,
+      count(*) >5 as should_error
+    from (
+      
+    
+    
+
+
+
+select transaction_id
+from "dbt"."marts"."contacts_joined_with_transactions"
+where transaction_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:06.563952 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.564952 [debug] [Thread-1 (]: Timing info for test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca (execute): 14:21:06.507445 => 14:21:06.564952
+[0m14:21:06.564952 [debug] [Thread-1 (]: On test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca: ROLLBACK
+[0m14:21:06.565952 [debug] [Thread-1 (]: On test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca: Close
+[0m14:21:06.566953 [info ] [Thread-1 (]: 19 of 25 PASS not_null_contacts_joined_with_transactions_transaction_id ........ [[32mPASS[0m in 0.07s]
+[0m14:21:06.566953 [debug] [Thread-1 (]: Finished running node test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca
+[0m14:21:06.592979 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.592979 [debug] [Thread-3 (]: Using postgres connection "test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5"
+[0m14:21:06.593954 [debug] [Thread-3 (]: On test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "dbt"."marts"."contacts_joined_with_transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:21:06.594953 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.595953 [debug] [Thread-3 (]: Timing info for test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5 (execute): 14:21:06.509442 => 14:21:06.595953
+[0m14:21:06.596953 [debug] [Thread-3 (]: On test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5: ROLLBACK
+[0m14:21:06.596953 [debug] [Thread-3 (]: On test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5: Close
+[0m14:21:06.597959 [info ] [Thread-3 (]: 20 of 25 PASS unique_contacts_joined_with_transactions_transaction_id .......... [[32mPASS[0m in 0.10s]
+[0m14:21:06.598959 [debug] [Thread-3 (]: Finished running node test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5
+[0m14:21:06.598959 [debug] [Thread-2 (]: Began running node model.customer360.customers
+[0m14:21:06.599959 [info ] [Thread-2 (]: 21 of 25 START sql table model marts.customers ................................. [RUN]
+[0m14:21:06.600961 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.customer360.cross_shopping, now model.customer360.customers)
+[0m14:21:06.600961 [debug] [Thread-2 (]: Began compiling node model.customer360.customers
+[0m14:21:06.605962 [debug] [Thread-2 (]: Writing injected SQL for node "model.customer360.customers"
+[0m14:21:06.606964 [debug] [Thread-2 (]: Timing info for model.customer360.customers (compile): 14:21:06.600961 => 14:21:06.605962
+[0m14:21:06.606964 [debug] [Thread-2 (]: Began executing node model.customer360.customers
+[0m14:21:06.609962 [debug] [Thread-2 (]: Writing runtime sql for node "model.customer360.customers"
+[0m14:21:06.610961 [debug] [Thread-2 (]: Using postgres connection "model.customer360.customers"
+[0m14:21:06.610961 [debug] [Thread-2 (]: On model.customer360.customers: BEGIN
+[0m14:21:06.610961 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:06.659824 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.659824 [debug] [Thread-2 (]: Using postgres connection "model.customer360.customers"
+[0m14:21:06.660823 [debug] [Thread-2 (]: On model.customer360.customers: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.customers"} */
+
+  
+    
+
+  create  table "dbt"."marts"."customers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with intermediate as (
+SELECT
+    new_id,
+    gender,
+    first_value (transaction_date::date) over(partition by id order by transaction_date) as first_purchase_date,
+    last_value (transaction_date::date) over(partition by id order by transaction_date rows between unbounded preceding and unbounded following) as last_purchase_date,
+    
+
+    
+
+        date_part('year', age(current_date,birth_date))
+
+    
+
+ AS age,
+    case when category = 'Apps & Games' then amount else 0 end as "Apps & Games_amount"
+    ,case when category = 'Beauty' then amount else 0 end as "Beauty_amount"
+    ,case when category = 'Books' then amount else 0 end as "Books_amount"
+    ,case when category = 'Clothing, Shoes & Accessories' then amount else 0 end as "Clothing, Shoes & Accessories_amount"
+    ,case when category = 'Movies & TV' then amount else 0 end as "Movies & TV_amount"
+    ,case when category = 'Sports, Fitness & Outdoors' then amount else 0 end as "Sports, Fitness & Outdoors_amount"
+    ,case when category = 'Kitchen' then amount else 0 end as "Kitchen_amount"
+    
+FROM "dbt"."marts"."contacts_joined_with_transactions"
+)
+, final as (
+select 
+    new_id,
+    gender,
+    first_purchase_date,
+    last_purchase_date,
+    age,
+    sum("Apps & Games_amount") as "Apps & Games_amount"
+    ,sum("Beauty_amount") as "Beauty_amount"
+    ,sum("Books_amount") as "Books_amount"
+    ,sum("Clothing, Shoes & Accessories_amount") as "Clothing, Shoes & Accessories_amount"
+    ,sum("Movies & TV_amount") as "Movies & TV_amount"
+    ,sum("Sports, Fitness & Outdoors_amount") as "Sports, Fitness & Outdoors_amount"
+    ,sum("Kitchen_amount") as "Kitchen_amount"
+    
+FROM intermediate 
+group by 
+1,2,3,4,5
+)
+select * from final
+  );
+  
+[0m14:21:06.668827 [debug] [Thread-2 (]: SQL status: SELECT 9 in 0.0 seconds
+[0m14:21:06.670749 [debug] [Thread-2 (]: Using postgres connection "model.customer360.customers"
+[0m14:21:06.671749 [debug] [Thread-2 (]: On model.customer360.customers: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.customers"} */
+alter table "dbt"."marts"."customers" rename to "customers__dbt_backup"
+[0m14:21:06.671749 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:21:06.674749 [debug] [Thread-2 (]: Using postgres connection "model.customer360.customers"
+[0m14:21:06.674749 [debug] [Thread-2 (]: On model.customer360.customers: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.customers"} */
+alter table "dbt"."marts"."customers__dbt_tmp" rename to "customers"
+[0m14:21:06.674749 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:21:06.676748 [debug] [Thread-2 (]: On model.customer360.customers: COMMIT
+[0m14:21:06.676748 [debug] [Thread-2 (]: Using postgres connection "model.customer360.customers"
+[0m14:21:06.677748 [debug] [Thread-2 (]: On model.customer360.customers: COMMIT
+[0m14:21:06.677748 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:06.680800 [debug] [Thread-2 (]: Applying DROP to: "dbt"."marts"."customers__dbt_backup"
+[0m14:21:06.682773 [debug] [Thread-2 (]: Using postgres connection "model.customer360.customers"
+[0m14:21:06.682773 [debug] [Thread-2 (]: On model.customer360.customers: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "model.customer360.customers"} */
+drop table if exists "dbt"."marts"."customers__dbt_backup" cascade
+[0m14:21:06.684749 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:21:06.685749 [debug] [Thread-2 (]: Timing info for model.customer360.customers (execute): 14:21:06.606964 => 14:21:06.685749
+[0m14:21:06.685749 [debug] [Thread-2 (]: On model.customer360.customers: Close
+[0m14:21:06.686749 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8aab817e-c2b2-4c76-8c60-a051c380f27c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C5385B0>]}
+[0m14:21:06.686749 [info ] [Thread-2 (]: 21 of 25 OK created sql table model marts.customers ............................ [[32mSELECT 9[0m in 0.09s]
+[0m14:21:06.687748 [debug] [Thread-2 (]: Finished running node model.customer360.customers
+[0m14:21:06.688780 [debug] [Thread-3 (]: Began running node test.customer360.check_first_purchase_date
+[0m14:21:06.688780 [debug] [Thread-1 (]: Began running node test.customer360.check_last_purchase_date
+[0m14:21:06.688780 [debug] [Thread-2 (]: Began running node test.customer360.check_purchase_amount_above_zero
+[0m14:21:06.689777 [info ] [Thread-3 (]: 22 of 25 START test check_first_purchase_date .................................. [RUN]
+[0m14:21:06.689777 [info ] [Thread-1 (]: 23 of 25 START test check_last_purchase_date ................................... [RUN]
+[0m14:21:06.690777 [info ] [Thread-2 (]: 24 of 25 START test check_purchase_amount_above_zero ........................... [RUN]
+[0m14:21:06.690777 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.customer360.unique_contacts_joined_with_transactions_transaction_id.84a2e9edc5, now test.customer360.check_first_purchase_date)
+[0m14:21:06.691776 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer360.not_null_contacts_joined_with_transactions_transaction_id.7b97ab79ca, now test.customer360.check_last_purchase_date)
+[0m14:21:06.691776 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.customer360.customers, now test.customer360.check_purchase_amount_above_zero)
+[0m14:21:06.692748 [debug] [Thread-3 (]: Began compiling node test.customer360.check_first_purchase_date
+[0m14:21:06.692748 [debug] [Thread-1 (]: Began compiling node test.customer360.check_last_purchase_date
+[0m14:21:06.693749 [debug] [Thread-2 (]: Began compiling node test.customer360.check_purchase_amount_above_zero
+[0m14:21:06.695253 [debug] [Thread-3 (]: Writing injected SQL for node "test.customer360.check_first_purchase_date"
+[0m14:21:06.698268 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer360.check_last_purchase_date"
+[0m14:21:06.699267 [debug] [Thread-2 (]: Writing injected SQL for node "test.customer360.check_purchase_amount_above_zero"
+[0m14:21:06.700269 [debug] [Thread-3 (]: Timing info for test.customer360.check_first_purchase_date (compile): 14:21:06.693749 => 14:21:06.700269
+[0m14:21:06.700269 [debug] [Thread-1 (]: Timing info for test.customer360.check_last_purchase_date (compile): 14:21:06.696260 => 14:21:06.700269
+[0m14:21:06.701265 [debug] [Thread-3 (]: Began executing node test.customer360.check_first_purchase_date
+[0m14:21:06.701265 [debug] [Thread-2 (]: Timing info for test.customer360.check_purchase_amount_above_zero (compile): 14:21:06.698268 => 14:21:06.701265
+[0m14:21:06.702265 [debug] [Thread-1 (]: Began executing node test.customer360.check_last_purchase_date
+[0m14:21:06.703265 [debug] [Thread-3 (]: Writing runtime sql for node "test.customer360.check_first_purchase_date"
+[0m14:21:06.704265 [debug] [Thread-2 (]: Began executing node test.customer360.check_purchase_amount_above_zero
+[0m14:21:06.705265 [debug] [Thread-1 (]: Writing runtime sql for node "test.customer360.check_last_purchase_date"
+[0m14:21:06.707265 [debug] [Thread-2 (]: Writing runtime sql for node "test.customer360.check_purchase_amount_above_zero"
+[0m14:21:06.708266 [debug] [Thread-3 (]: Using postgres connection "test.customer360.check_first_purchase_date"
+[0m14:21:06.708266 [debug] [Thread-1 (]: Using postgres connection "test.customer360.check_last_purchase_date"
+[0m14:21:06.709265 [debug] [Thread-3 (]: On test.customer360.check_first_purchase_date: BEGIN
+[0m14:21:06.709265 [debug] [Thread-2 (]: Using postgres connection "test.customer360.check_purchase_amount_above_zero"
+[0m14:21:06.709265 [debug] [Thread-1 (]: On test.customer360.check_last_purchase_date: BEGIN
+[0m14:21:06.710264 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:21:06.710264 [debug] [Thread-2 (]: On test.customer360.check_purchase_amount_above_zero: BEGIN
+[0m14:21:06.710264 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:06.711265 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:21:06.794995 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.795997 [debug] [Thread-1 (]: Using postgres connection "test.customer360.check_last_purchase_date"
+[0m14:21:06.795997 [debug] [Thread-1 (]: On test.customer360.check_last_purchase_date: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.check_last_purchase_date"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      with pivot_table as (
+select
+	new_id,
+	max(transaction_date::date) as last_date
+from
+	"dbt"."marts"."contacts_joined_with_transactions"
+	group by 1
+)
+, comparing_table as (
+select
+	a.new_id,
+	a.last_purchase_date,
+	b.last_date
+from
+	"dbt"."marts"."customers" a 
+left join 
+pivot_table b
+on a.new_id = b.new_id
+)
+select 
+*
+from comparing_table
+where 
+last_purchase_date <> last_date
+      
+    ) dbt_internal_test
+[0m14:21:06.798049 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.800053 [debug] [Thread-1 (]: Timing info for test.customer360.check_last_purchase_date (execute): 14:21:06.704265 => 14:21:06.799050
+[0m14:21:06.800053 [debug] [Thread-1 (]: On test.customer360.check_last_purchase_date: ROLLBACK
+[0m14:21:06.800053 [debug] [Thread-1 (]: On test.customer360.check_last_purchase_date: Close
+[0m14:21:06.801070 [info ] [Thread-1 (]: 23 of 25 PASS check_last_purchase_date ......................................... [[32mPASS[0m in 0.11s]
+[0m14:21:06.802067 [debug] [Thread-1 (]: Finished running node test.customer360.check_last_purchase_date
+[0m14:21:06.802067 [debug] [Thread-1 (]: Began running node test.customer360.check_valid_customers
+[0m14:21:06.803064 [info ] [Thread-1 (]: 25 of 25 START test check_valid_customers ...................................... [RUN]
+[0m14:21:06.803996 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer360.check_last_purchase_date, now test.customer360.check_valid_customers)
+[0m14:21:06.803996 [debug] [Thread-1 (]: Began compiling node test.customer360.check_valid_customers
+[0m14:21:06.806072 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer360.check_valid_customers"
+[0m14:21:06.807063 [debug] [Thread-1 (]: Timing info for test.customer360.check_valid_customers (compile): 14:21:06.803996 => 14:21:06.807063
+[0m14:21:06.807063 [debug] [Thread-1 (]: Began executing node test.customer360.check_valid_customers
+[0m14:21:06.810070 [debug] [Thread-1 (]: Writing runtime sql for node "test.customer360.check_valid_customers"
+[0m14:21:06.810070 [debug] [Thread-1 (]: Using postgres connection "test.customer360.check_valid_customers"
+[0m14:21:06.811073 [debug] [Thread-1 (]: On test.customer360.check_valid_customers: BEGIN
+[0m14:21:06.811073 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:06.823699 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.823699 [debug] [Thread-2 (]: Using postgres connection "test.customer360.check_purchase_amount_above_zero"
+[0m14:21:06.824702 [debug] [Thread-2 (]: On test.customer360.check_purchase_amount_above_zero: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.check_purchase_amount_above_zero"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select
+	new_id
+from
+	"dbt"."marts"."customers"
+where 
+    "Apps & Games_amount"+"Beauty_amount"+ "Books_amount"+ "Clothing, Shoes & Accessories_amount"+ "Movies & TV_amount"+ "Sports, Fitness & Outdoors_amount"+"Kitchen_amount" <= 0
+      
+    ) dbt_internal_test
+[0m14:21:06.825701 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.826702 [debug] [Thread-2 (]: Timing info for test.customer360.check_purchase_amount_above_zero (execute): 14:21:06.706265 => 14:21:06.826702
+[0m14:21:06.826702 [debug] [Thread-2 (]: On test.customer360.check_purchase_amount_above_zero: ROLLBACK
+[0m14:21:06.827704 [debug] [Thread-2 (]: On test.customer360.check_purchase_amount_above_zero: Close
+[0m14:21:06.828704 [info ] [Thread-2 (]: 24 of 25 PASS check_purchase_amount_above_zero ................................. [[32mPASS[0m in 0.14s]
+[0m14:21:06.828704 [debug] [Thread-2 (]: Finished running node test.customer360.check_purchase_amount_above_zero
+[0m14:21:06.857688 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.858688 [debug] [Thread-1 (]: Using postgres connection "test.customer360.check_valid_customers"
+[0m14:21:06.858688 [debug] [Thread-1 (]: On test.customer360.check_valid_customers: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.check_valid_customers"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      select
+	new_id
+from
+	"dbt"."marts"."customers"
+where
+	new_id not in (
+	select
+		new_id
+	from
+		"dbt"."staging"."stg_sf__contacts"
+    )
+      
+    ) dbt_internal_test
+[0m14:21:06.859688 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.860688 [debug] [Thread-1 (]: Timing info for test.customer360.check_valid_customers (execute): 14:21:06.807063 => 14:21:06.860688
+[0m14:21:06.861688 [debug] [Thread-1 (]: On test.customer360.check_valid_customers: ROLLBACK
+[0m14:21:06.861688 [debug] [Thread-1 (]: On test.customer360.check_valid_customers: Close
+[0m14:21:06.862731 [info ] [Thread-1 (]: 25 of 25 PASS check_valid_customers ............................................ [[32mPASS[0m in 0.06s]
+[0m14:21:06.863690 [debug] [Thread-1 (]: Finished running node test.customer360.check_valid_customers
+[0m14:21:06.866688 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.866688 [debug] [Thread-3 (]: Using postgres connection "test.customer360.check_first_purchase_date"
+[0m14:21:06.867688 [debug] [Thread-3 (]: On test.customer360.check_first_purchase_date: /* {"app": "dbt", "dbt_version": "1.7.2", "profile_name": "integration_tests", "target_name": "local", "node_id": "test.customer360.check_first_purchase_date"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      with pivot_table as (
+select
+	new_id,
+	min(transaction_date::date) as first_date
+from
+	"dbt"."marts"."contacts_joined_with_transactions"
+	group by 1
+)
+, comparing_table as (
+select
+	a.new_id,
+	a.first_purchase_date,
+	b.first_date
+from
+	"dbt"."marts"."customers" a 
+left join 
+pivot_table b
+on a.new_id = b.new_id
+)
+select 
+*
+from comparing_table
+where 
+first_purchase_date <> first_date
+      
+    ) dbt_internal_test
+[0m14:21:06.869688 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:21:06.870688 [debug] [Thread-3 (]: Timing info for test.customer360.check_first_purchase_date (execute): 14:21:06.702265 => 14:21:06.870688
+[0m14:21:06.870688 [debug] [Thread-3 (]: On test.customer360.check_first_purchase_date: ROLLBACK
+[0m14:21:06.871688 [debug] [Thread-3 (]: On test.customer360.check_first_purchase_date: Close
+[0m14:21:06.871688 [info ] [Thread-3 (]: 22 of 25 PASS check_first_purchase_date ........................................ [[32mPASS[0m in 0.18s]
+[0m14:21:06.872709 [debug] [Thread-3 (]: Finished running node test.customer360.check_first_purchase_date
+[0m14:21:06.873749 [debug] [MainThread]: Using postgres connection "master"
+[0m14:21:06.874717 [debug] [MainThread]: On master: BEGIN
+[0m14:21:06.874717 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:21:06.923283 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:21:06.923283 [debug] [MainThread]: On master: COMMIT
+[0m14:21:06.924281 [debug] [MainThread]: Using postgres connection "master"
+[0m14:21:06.924281 [debug] [MainThread]: On master: COMMIT
+[0m14:21:06.924281 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:21:06.925282 [debug] [MainThread]: On master: Close
+[0m14:21:06.925282 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:21:06.926281 [debug] [MainThread]: Connection 'list_dbt' was properly closed.
+[0m14:21:06.926281 [debug] [MainThread]: Connection 'list_dbt' was properly closed.
+[0m14:21:06.926281 [debug] [MainThread]: Connection 'list_dbt' was properly closed.
+[0m14:21:06.926281 [debug] [MainThread]: Connection 'list_dbt_public' was properly closed.
+[0m14:21:06.927282 [debug] [MainThread]: Connection 'list_dbt_staging' was properly closed.
+[0m14:21:06.927282 [debug] [MainThread]: Connection 'list_dbt_snapshots' was properly closed.
+[0m14:21:06.927282 [debug] [MainThread]: Connection 'test.customer360.check_valid_customers' was properly closed.
+[0m14:21:06.928283 [debug] [MainThread]: Connection 'test.customer360.check_purchase_amount_above_zero' was properly closed.
+[0m14:21:06.928283 [debug] [MainThread]: Connection 'test.customer360.check_first_purchase_date' was properly closed.
+[0m14:21:06.928283 [info ] [MainThread]: 
+[0m14:21:06.929283 [info ] [MainThread]: Finished running 2 seeds, 17 tests, 3 table models, 1 snapshot, 1 incremental model, 1 view model in 0 hours 0 minutes and 2.08 seconds (2.08s).
+[0m14:21:06.931281 [debug] [MainThread]: Command end result
+[0m14:21:06.938282 [info ] [MainThread]: 
+[0m14:21:06.939283 [info ] [MainThread]: [33mCompleted with 1 warning:[0m
+[0m14:21:06.939283 [info ] [MainThread]: 
+[0m14:21:06.940282 [warn ] [MainThread]: [33mWarning in test source_unique_salesforce_contacts_id (models\staging\salesforce\_sf__sources.yaml)[0m
+[0m14:21:06.940282 [warn ] [MainThread]: Got 1 result, configured to warn if != 0
+[0m14:21:06.940282 [info ] [MainThread]: 
+[0m14:21:06.941282 [info ] [MainThread]:   compiled Code at target\compiled\customer360\models\staging\salesforce\_sf__sources.yaml\source_unique_salesforce_contacts_id.sql
+[0m14:21:06.941282 [info ] [MainThread]: 
+[0m14:21:06.942282 [info ] [MainThread]: Done. PASS=24 WARN=1 ERROR=0 SKIP=0 TOTAL=25
+[0m14:21:06.942282 [debug] [MainThread]: Command `dbt build` succeeded at 14:21:06.942282 after 2.53 seconds
+[0m14:21:06.943281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020278BA4400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C5385B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002027C3310C0>]}
+[0m14:21:06.943281 [debug] [MainThread]: Flushing usage events
