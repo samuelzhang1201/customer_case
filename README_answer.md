@@ -130,6 +130,22 @@ My opinions are:
 
 8. Think of how you can implement the following (what additional datasets would you use, how will the models look etc). We will explore these add-ons during tech interview stage. Additional points, if you can implement them now!
    + Product Category Recommender - how to implement Next Best Product Category?
+we can do some cross - shopping analysis but need more data here.
+--we can find most popular product combination
+in cross_shopping.sql model
+
+--we can focus on the word 'next' to find purchase sequences.
+in next_category.sql
+
+
    + Data Sharing: how would you implement PII on this data, so it can be safely shared with, say, partners?
+
+I know in snowflake, we can use masking policy and user access control, and shared data base/schema to manage PII.
+Meanwhile, in dbt, i think we can also have mulitple ways of managing PII by:
+1. using pre-hook/post-hook to setup user access control
+2. As I mentioned in the very beginning, sepearate different environment, like dev, prod, 3rd_party
+3. Maintain user access control in our SQL database
+4. can create some PII models using SQL functions  
+
 
 
