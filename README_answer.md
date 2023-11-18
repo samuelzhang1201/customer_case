@@ -145,7 +145,7 @@ Meanwhile, in dbt, i think we can also have mulitple ways of managing PII by:
 1. using pre-hook/post-hook to setup user access control
 2. As I mentioned in the very beginning, sepearate different environment, like dev, prod, 3rd_party
 3. Maintain user access control in our SQL database
-4. can create some PII models using SQL functions  
-
+4. can create some data masking views models using SQL functions  : masked_contact.sql model
+5. consider to configure soem 'senstive' tags in yaml file.
 
 
